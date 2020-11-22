@@ -1,0 +1,9 @@
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\bin\Debug\DAL.dll
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\bin\Debug\DAL.pdb
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\bin\Debug\DTO.dll
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\bin\Debug\DTO.pdb
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.dll
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.pdb
