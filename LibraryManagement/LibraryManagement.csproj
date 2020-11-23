@@ -67,12 +67,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Admin0.aspx" />
+    <Content Include="Admin\Admin1.aspx" />
     <Content Include="CheckLogin.aspx" />
-    <Content Include="LoginForm.aspx" />
-    <Content Include="style1.css" />
+    <Content Include="css\nackbarCustom.css" />
+    <Content Include="Login\ControlForm.aspx" />
+    <Content Include="Login\LoginForm.aspx" />
+    <Content Include="css\style1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin0.aspx.cs">
+      <DependentUpon>Admin0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin0.aspx.designer.cs">
+      <DependentUpon>Admin0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin1.aspx.cs">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin1.aspx.designer.cs">
+      <DependentUpon>Admin1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CheckLogin.aspx.cs">
       <DependentUpon>CheckLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -80,11 +98,18 @@
     <Compile Include="CheckLogin.aspx.designer.cs">
       <DependentUpon>CheckLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.aspx.cs">
+    <Compile Include="Login\ControlForm.aspx.cs">
+      <DependentUpon>ControlForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ControlForm.aspx.designer.cs">
+      <DependentUpon>ControlForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\LoginForm.aspx.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LoginForm.aspx.designer.cs">
+    <Compile Include="Login\LoginForm.aspx.designer.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,7 +6,8 @@
 <head runat="server">
     <title>Đăng nhập hệ thống</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="style1.css" type="text/css" rel="stylesheet" />
+    <link href="/css/style1.css" type="text/css" rel="stylesheet" />
+    <link href="/css/nackbarCustom.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <div class="bg-img">
@@ -19,7 +20,23 @@
     <label for="psw"><b>Password</b></label>
       <asp:TextBox ID="txtPass" type="password" runat="server" placeholder="Enter Password" name="psw"/>
 
-      <asp:Button ID="btnLogin" Text="Login" runat="server" type="submit" class="btn" OnClick="btnLogin_Click"/>
+      <asp:ScriptManager runat="server">
+
+        </asp:ScriptManager>
+
+       <asp:UpdatePanel runat="server" ID="UpdatePanel1">
+    <ContentTemplate>
+        <div>
+            <asp:Button ID="btnLogin" Text="Login" runat="server" type="submit" class="btn" OnClick="btnLogin_Click"/>
+        </div>
+
+        <div id="snackbar">
+            <asp:Label runat="server" ID="Snack" />
+        </div>
+    </ContentTemplate>
+</asp:UpdatePanel>
+
+  
   </form>
 </div>
 </body>
