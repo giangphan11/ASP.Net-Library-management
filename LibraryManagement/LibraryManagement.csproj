@@ -67,29 +67,148 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\Admin0.aspx" />
-    <Content Include="Admin\Admin1.aspx" />
+    <Content Include="Admin\AMuonQuaHan.aspx" />
+    <Content Include="Admin\AMuonTheoTheLoai.aspx" />
+    <Content Include="Admin\AQLChucVu.aspx" />
+    <Content Include="Admin\AQLDocGia.aspx" />
+    <Content Include="Admin\AQLDoiTuong.aspx" />
+    <Content Include="Admin\AQLNhanVien.aspx" />
+    <Content Include="Admin\AQLTaiLieu.aspx" />
+    <Content Include="Admin\AQLTheLoai.aspx" />
+    <Content Include="Admin\ATop10TL.aspx" />
+    <Content Include="Admin\DashBoadAdmin.aspx" />
+    <Content Include="Admin\AMuonSach.aspx" />
+    <Content Include="Admin\ATraSach.aspx" />
+    <Content Include="css\styleMasterLibrarian.css" />
+    <Content Include="assets\AT-pro-black.png" />
+    <Content Include="assets\AT-pro-logo.png" />
+    <Content Include="assets\AT-pro-white.png" />
+    <Content Include="assets\tuat.jpg" />
     <Content Include="CheckLogin.aspx" />
     <Content Include="css\nackbarCustom.css" />
+    <Content Include="css\styleMaster.css" />
+    <Content Include="fontawesome-free\css\all.css" />
+    <Content Include="fontawesome-free\css\all.min.css" />
+    <Content Include="fontawesome-free\css\brands.css" />
+    <Content Include="fontawesome-free\css\brands.min.css" />
+    <Content Include="fontawesome-free\css\fontawesome.css" />
+    <Content Include="fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="fontawesome-free\css\regular.css" />
+    <Content Include="fontawesome-free\css\regular.min.css" />
+    <Content Include="fontawesome-free\css\solid.css" />
+    <Content Include="fontawesome-free\css\solid.min.css" />
+    <Content Include="fontawesome-free\css\svg-with-js.css" />
+    <Content Include="fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="fontawesome-free\css\v4-shims.css" />
+    <Content Include="fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="fontawesome-free\LICENSE.txt" />
+    <Content Include="fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="Librarian\DashBoadLib.aspx" />
+    <Content Include="Librarian\TTMuonQuaHan.aspx" />
+    <Content Include="Librarian\TTMuonSach.aspx" />
+    <Content Include="Librarian\TTMuonTheoTL.aspx" />
+    <Content Include="Librarian\TTTop10TL.aspx" />
+    <Content Include="Librarian\TTTraSach.aspx" />
     <Content Include="Login\ControlForm.aspx" />
     <Content Include="Login\LoginForm.aspx" />
     <Content Include="css\style1.css" />
+    <Content Include="scripts\index.js" />
+    <Content Include="ViewAdmin\About.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Admin0.aspx.cs">
-      <DependentUpon>Admin0.aspx</DependentUpon>
+    <Compile Include="Admin\AMuonQuaHan.aspx.cs">
+      <DependentUpon>AMuonQuaHan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Admin0.aspx.designer.cs">
-      <DependentUpon>Admin0.aspx</DependentUpon>
+    <Compile Include="Admin\AMuonQuaHan.aspx.designer.cs">
+      <DependentUpon>AMuonQuaHan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Admin1.aspx.cs">
-      <DependentUpon>Admin1.aspx</DependentUpon>
+    <Compile Include="Admin\AMuonTheoTheLoai.aspx.cs">
+      <DependentUpon>AMuonTheoTheLoai.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Admin1.aspx.designer.cs">
-      <DependentUpon>Admin1.aspx</DependentUpon>
+    <Compile Include="Admin\AMuonTheoTheLoai.aspx.designer.cs">
+      <DependentUpon>AMuonTheoTheLoai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AQLChucVu.aspx.cs">
+      <DependentUpon>AQLChucVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AQLChucVu.aspx.designer.cs">
+      <DependentUpon>AQLChucVu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AQLDocGia.aspx.cs">
+      <DependentUpon>AQLDocGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AQLDocGia.aspx.designer.cs">
+      <DependentUpon>AQLDocGia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AQLDoiTuong.aspx.cs">
+      <DependentUpon>AQLDoiTuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AQLDoiTuong.aspx.designer.cs">
+      <DependentUpon>AQLDoiTuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AQLNhanVien.aspx.cs">
+      <DependentUpon>AQLNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AQLNhanVien.aspx.designer.cs">
+      <DependentUpon>AQLNhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AQLTaiLieu.aspx.cs">
+      <DependentUpon>AQLTaiLieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AQLTaiLieu.aspx.designer.cs">
+      <DependentUpon>AQLTaiLieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AQLTheLoai.aspx.cs">
+      <DependentUpon>AQLTheLoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AQLTheLoai.aspx.designer.cs">
+      <DependentUpon>AQLTheLoai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ATop10TL.aspx.cs">
+      <DependentUpon>ATop10TL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ATop10TL.aspx.designer.cs">
+      <DependentUpon>ATop10TL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DashBoadAdmin.aspx.cs">
+      <DependentUpon>DashBoadAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DashBoadAdmin.aspx.designer.cs">
+      <DependentUpon>DashBoadAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SiteAdmin.Master.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SiteAdmin.Master.designer.cs">
+      <DependentUpon>SiteAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AMuonSach.aspx.cs">
+      <DependentUpon>AMuonSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AMuonSach.aspx.designer.cs">
+      <DependentUpon>AMuonSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ATraSach.aspx.cs">
+      <DependentUpon>ATraSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ATraSach.aspx.designer.cs">
+      <DependentUpon>ATraSach.aspx</DependentUpon>
     </Compile>
     <Compile Include="CheckLogin.aspx.cs">
       <DependentUpon>CheckLogin.aspx</DependentUpon>
@@ -97,6 +216,55 @@
     </Compile>
     <Compile Include="CheckLogin.aspx.designer.cs">
       <DependentUpon>CheckLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\DashBoadLib.aspx.cs">
+      <DependentUpon>DashBoadLib.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\DashBoadLib.aspx.designer.cs">
+      <DependentUpon>DashBoadLib.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\SiteLibra.Master.cs">
+      <DependentUpon>SiteLibra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\SiteLibra.Master.designer.cs">
+      <DependentUpon>SiteLibra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\TTMuonQuaHan.aspx.cs">
+      <DependentUpon>TTMuonQuaHan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\TTMuonQuaHan.aspx.designer.cs">
+      <DependentUpon>TTMuonQuaHan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\TTMuonSach.aspx.cs">
+      <DependentUpon>TTMuonSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\TTMuonSach.aspx.designer.cs">
+      <DependentUpon>TTMuonSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\TTMuonTheoTL.aspx.cs">
+      <DependentUpon>TTMuonTheoTL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\TTMuonTheoTL.aspx.designer.cs">
+      <DependentUpon>TTMuonTheoTL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\TTTop10TL.aspx.cs">
+      <DependentUpon>TTTop10TL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\TTTop10TL.aspx.designer.cs">
+      <DependentUpon>TTTop10TL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian\TTTraSach.aspx.cs">
+      <DependentUpon>TTTraSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Librarian\TTTraSach.aspx.designer.cs">
+      <DependentUpon>TTTraSach.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\ControlForm.aspx.cs">
       <DependentUpon>ControlForm.aspx</DependentUpon>
@@ -113,8 +281,29 @@
       <DependentUpon>LoginForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewAdmin\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAdmin\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\SiteAdmin.Master" />
+    <Content Include="fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="Librarian\SiteLibra.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

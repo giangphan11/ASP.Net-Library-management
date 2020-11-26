@@ -15,11 +15,11 @@ namespace LibraryManagement
             NhanVien nv = (NhanVien)Session["nhanvien"];
             if (nv.Quyen == 0)
             {
-                Response.Redirect("/Admin/Admin0.aspx");
+                Response.Redirect("/Librarian/DashBoadLib.aspx");
             }
             else
             {
-                Response.Redirect("/Admin/Admin1.aspx");
+                Response.Redirect("/Admin/DashBoadAdmin.aspx");
             }
         }
     }
