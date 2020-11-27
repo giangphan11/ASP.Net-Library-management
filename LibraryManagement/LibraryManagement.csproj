@@ -79,6 +79,8 @@
     <Content Include="Admin\DashBoadAdmin.aspx" />
     <Content Include="Admin\AMuonSach.aspx" />
     <Content Include="Admin\ATraSach.aspx" />
+    <Content Include="Admin\Edit\SuaChucVu.aspx" />
+    <Content Include="Admin\Edit\SuaDoiTuong.aspx" />
     <Content Include="css\styleMasterLibrarian.css" />
     <Content Include="assets\AT-pro-black.png" />
     <Content Include="assets\AT-pro-logo.png" />
@@ -189,6 +191,20 @@
     </Compile>
     <Compile Include="Admin\DashBoadAdmin.aspx.designer.cs">
       <DependentUpon>DashBoadAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaChucVu.aspx.cs">
+      <DependentUpon>SuaChucVu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaChucVu.aspx.designer.cs">
+      <DependentUpon>SuaChucVu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaDoiTuong.aspx.cs">
+      <DependentUpon>SuaDoiTuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaDoiTuong.aspx.designer.cs">
+      <DependentUpon>SuaDoiTuong.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\SiteAdmin.Master.cs">
       <DependentUpon>SiteAdmin.Master</DependentUpon>

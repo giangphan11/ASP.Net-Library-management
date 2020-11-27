@@ -14,5 +14,13 @@ namespace BLL
         {
             return vienAccess.layDanhSachNhanVien();
         }
+        public string xoaNhanVien(string ma)
+        {
+            return vienAccess.xoaNhanVien(ma);
+        }
+        public string themNhanVien(NhanVien nv)
+        {
+            return vienAccess.themNhanVien(nv);
+        }
     }
 }

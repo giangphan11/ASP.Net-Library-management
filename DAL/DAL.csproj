@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChucVuAccess.cs" />
     <Compile Include="ConnectionAccess.cs" />
     <Compile Include="NhanVienAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
