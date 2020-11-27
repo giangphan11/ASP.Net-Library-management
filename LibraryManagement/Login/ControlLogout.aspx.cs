@@ -5,14 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace LibraryManagement.Admin
+namespace LibraryManagement.Login
 {
-    public partial class Site1 : System.Web.UI.MasterPage
+    public partial class ControlLogout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["nhanvien"] = null;
+            Response.Redirect("/Login/LoginForm.aspx");
         }
-        
     }
 }

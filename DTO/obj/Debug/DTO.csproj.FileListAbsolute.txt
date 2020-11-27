@@ -3,3 +3,4 @@ D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\bin\Debug\DTO.pdb
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\obj\Debug\DTO.dll
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\obj\Debug\DTO.pdb
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

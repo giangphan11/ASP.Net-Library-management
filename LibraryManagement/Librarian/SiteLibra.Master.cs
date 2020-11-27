@@ -14,10 +14,6 @@ namespace LibraryManagement.Librarian
         {
             //NhanVien nv =(NhanVien) Session["nhanvien"];
         }
-        protected void xuLyThoat(object sender, EventArgs e)
-        {
-            Session["nhanvien"] = null;
-            Response.Redirect("/Login/LoginForm.aspx");
-        }
+               
     }
 }

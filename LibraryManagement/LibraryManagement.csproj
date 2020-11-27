@@ -112,6 +112,7 @@
     <Content Include="Librarian\TTTop10TL.aspx" />
     <Content Include="Librarian\TTTraSach.aspx" />
     <Content Include="Login\ControlForm.aspx" />
+    <Content Include="Login\ControlLogout.aspx" />
     <Content Include="Login\LoginForm.aspx" />
     <Content Include="css\style1.css" />
     <Content Include="scripts\index.js" />
@@ -272,6 +273,13 @@
     </Compile>
     <Compile Include="Login\ControlForm.aspx.designer.cs">
       <DependentUpon>ControlForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ControlLogout.aspx.cs">
+      <DependentUpon>ControlLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ControlLogout.aspx.designer.cs">
+      <DependentUpon>ControlLogout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginForm.aspx.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>

@@ -13,17 +13,17 @@ namespace DTO
         public string MaCV { get; set; }
         public string Username { get; set; }
         public string PassWord { get; set; }
-        public int Quyen { get; set; }
+        public string Anh { get; set; }
 
         public NhanVien() { }
-        public NhanVien(string ma, string ten, string macv, string uname, string pass, int quyen)
+        public NhanVien(string ma, string ten, string macv, string uname, string pass, string anh)
         {
             this.MaNV = ma;
             this.TenNV = ten;
             this.MaCV = macv;
             this.Username = uname;
             this.PassWord = pass;
-            this.Quyen = quyen;
+            this.Anh = anh;
         }
     }
 }

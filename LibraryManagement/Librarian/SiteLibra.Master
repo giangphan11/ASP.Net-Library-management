@@ -274,11 +274,11 @@
 						</li>
 						<li  class="dropdown-menu-item">
 							
-							<a href="/Login/LoginForm.aspx" class="dropdown-menu-link">
+							<a href="/Login/ControlLogout.aspx" class="dropdown-menu-link">
                                 <div>
                                     <i class="fas fa-sign-out-alt"></i>
                                 </div>
-								<span>Logout<asp:Button ID="btnLog2" runat="server" OnClick="xuLyThoat" /> </span>
+								<span>Logout </span>
 							</a>
 						</li>
 					</ul>

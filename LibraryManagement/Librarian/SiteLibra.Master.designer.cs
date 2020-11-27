@@ -42,15 +42,6 @@ namespace LibraryManagement.Admin
         protected global::System.Web.UI.HtmlControls.HtmlForm form2;
 
         /// <summary>
-        /// btnLog2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLog2;
-
-        /// <summary>
         /// noi_dung2 control.
         /// </summary>
         /// <remarks>

@@ -13,11 +13,11 @@ namespace LibraryManagement
         protected void Page_Load(object sender, EventArgs e)
         {
             NhanVien nv = (NhanVien)Session["nhanvien"];
-            if (nv.Quyen == 0)
+            if (nv.MaCV.Equals("CV02"))
             {
                 Response.Redirect("/Librarian/DashBoadLib.aspx");
             }
-            else
+            if (nv.MaCV.Equals("CV01"))
             {
                 Response.Redirect("/Admin/DashBoadAdmin.aspx");
             }
