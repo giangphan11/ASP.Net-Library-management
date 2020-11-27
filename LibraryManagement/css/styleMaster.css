@@ -200,7 +200,7 @@ body {
 }
 
 .dropdown-menu-link {
-    display: flex ;
+    display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;

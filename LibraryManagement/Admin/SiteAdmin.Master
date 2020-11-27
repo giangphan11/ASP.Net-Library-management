@@ -9,11 +9,12 @@
     
 
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="icon" type="image/png" href="assets/AT-pro-logo.png"/>
+	<link rel="icon" type="image/png" href="assets/logofit.png"/>
 
 	<!-- Import lib -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"/>
 	<link rel="stylesheet" type="text/css" href="/fontawesome-free/css/all.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
 	<!-- End import lib -->
     <link rel="stylesheet" type="text/css" href="/css/styleMaster.css"/>
@@ -31,8 +32,8 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<img src="/assets/AT-pro-black.png" alt="ATPro logo" class="logo logo-light">
-				<img src="/assets/AT-pro-white.png" alt="ATPro logo" class="logo logo-dark">
+				<img src="/assets/logo_black.png" alt="Nhom 5 HaUI" class="logo logo-light">
+				<img src="/assets/logo_white.png" alt="Nhom 5 HaUI" class="logo logo-dark">
 			</li>
 		</ul>
 		<!-- end nav left -->
@@ -240,7 +241,8 @@
 			</li>
 			<li class="nav-item avt-wrapper">
 				<div class="avt dropdown">
-					<img src="/assets/az.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+					<asp:Image ID="img_Anh" alt="User image" class="dropdown-toggle" data-toggle="user-menu" runat="server" />
+					<%--<img src="/assets/az.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">--%>
 					<ul id="user-menu" class="dropdown-menu">
 						<li  class="dropdown-menu-item">
 							<a class="dropdown-menu-link">
@@ -306,7 +308,7 @@
 			<li class="sidebar-nav-item">
 				<a href="/Admin/AQLChucVu.aspx" class="sidebar-nav-link ">
 					<div>
-						<i class="fab fa-accusoft"></i>
+						<i class="fa fa-suitcase"></i>
 					</div>
 					<span>Chức vụ</span>
 				</a>
@@ -314,7 +316,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/AQLNhanVien.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-tasks"></i>
+						<i class="fa fa-user-circle-o"></i>
 					</div>
 					<span>Nhân viên</span>
 				</a>
@@ -322,7 +324,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/AQLDoiTuong.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-spinner"></i>
+						<i class="fa fa-users"></i>
 					</div>
 					<span>Đố tượng</span>
 				</a>
@@ -330,7 +332,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/AQLDocGia.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-check-circle"></i>
+						<i class="fa fa-address-book"></i>
 					</div>
 					<span>Độc giả</span>
 				</a>
@@ -338,7 +340,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/AQLTheLoai.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-bug"></i>
+						<i class="fa fa-book fa-fw"></i>
 					</div>
 					<span>Thể loại</span>
 				</a>
@@ -346,7 +348,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/AQLTaiLieu.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-chart-line"></i>
+						<i class="fas fa-book-open"></i>
 					</div>
 					<span>Tài liệu</span>
 				</a>
@@ -354,7 +356,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/AMuonTheoTheLoai.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-book-open"></i>
+						<i class="fa fa-server"></i>
 					</div>
 					<span>Số lần mượn theo thể loại</span>
 				</a>
@@ -362,7 +364,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/AMuonQuaHan.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-adjust"></i>
+						<i class="fa fa-bullhorn"></i>
 					</div>
 					<span>Tài liệu mượn quá hạn</span>
 				</a>
@@ -370,7 +372,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/ATop10TL.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-audio-description"></i>
+						<i class="fa fa-list-ol"></i>
 					</div>
 					<span>Top 10 tài liệu mượn nhiều nhất</span>
 				</a>
@@ -378,7 +380,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/AMuonSach.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-audio-description"></i>
+						<i class="fa fa-chevron-circle-left"></i>
 					</div>
 					<span>Mượn sách</span>
 				</a>
@@ -386,7 +388,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Admin/ATraSach.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-audio-description"></i>
+						<i class="fa fa-chevron-circle-right"></i>
 					</div>
 					<span>Trả sách</span>
 				</a>
@@ -403,10 +405,14 @@
 	</div>
 	<!-- end main content -->
 	<!-- import script -->
+
+
+		
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 	<script src="/scripts/index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- end import script -->
-
+		
 	</form>
 </body>
 </html>

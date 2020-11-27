@@ -42,6 +42,15 @@ namespace LibraryManagement.Admin
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// img_Anh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_Anh;
+
+        /// <summary>
         /// noi_dung control.
         /// </summary>
         /// <remarks>

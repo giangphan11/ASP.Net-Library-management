@@ -4,4 +4,5 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
+    <h2>Nhân Viên</h2>
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteLibra.Master.cs" Inherits="LibraryManagement.Admin.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteLibra.Master.cs" Inherits="LibraryManagement.Librarian.SiteLibra" %>
 
 <!DOCTYPE html>
 
@@ -29,8 +29,8 @@
 				</a>
 			</li>
 			<li class="nav-item">
-				<img src="/assets/AT-pro-black.png" alt="ATPro logo" class="logo logo-light">
-				<img src="/assets/AT-pro-white.png" alt="ATPro logo" class="logo logo-dark">
+				<img src="/assets/logo_black.png" alt="Nhom 5 HaUI" class="logo logo-light">
+				<img src="/assets/logo_white.png" alt="Nhom 5 HaUI" class="logo logo-dark">
 			</li>
 		</ul>
 		<!-- end nav left -->
@@ -238,7 +238,9 @@
 			</li>
 			<li class="nav-item avt-wrapper">
 				<div class="avt dropdown">
-					<img src="/assets/az.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+					
+					<asp:Image ID="img_Anh2" alt="User image" class="dropdown-toggle" data-toggle="user-menu" runat="server" />
+					<%--<img src="/assets/az.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">--%>
 					<ul id="user-menu" class="dropdown-menu">
 						<li  class="dropdown-menu-item">
 							<a class="dropdown-menu-link">
@@ -304,7 +306,7 @@
 			<li class="sidebar-nav-item">
 				<a href="/Librarian/TTMuonSach.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fab fa-accusoft"></i>
+						<i class="fa fa-chevron-circle-left"></i>
 					</div>
 					<span>Mượn sách</span>
 				</a>
@@ -312,7 +314,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Librarian/TTTraSach.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-tasks"></i>
+						<i class="fa fa-chevron-circle-right"></i>
 					</div>
 					<span>Trả sách</span>
 				</a>
@@ -320,7 +322,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Librarian/TTMuonTheoTL.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-spinner"></i>
+						<i class="fa fa-server"></i>
 					</div>
 					<span>Số lần mượn theo thể loại</span>
 				</a>
@@ -328,7 +330,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Librarian/TTMuonQuaHan.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-check-circle"></i>
+						<i class="fa fa-bullhorn"></i>
 					</div>
 					<span>Tài liệu mượn quá hạn</span>
 				</a>
@@ -336,7 +338,7 @@
 			<li  class="sidebar-nav-item">
 				<a href="/Librarian/TTTop10TL.aspx" class="sidebar-nav-link">
 					<div>
-						<i class="fas fa-bug"></i>
+						<i class="fa fa-list-ol"></i>
 					</div>
 					<span>Top 10 tài liệu mượn nhiều nhất</span>
 				</a>

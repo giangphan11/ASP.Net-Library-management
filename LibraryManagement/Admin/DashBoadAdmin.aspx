@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/SiteAdmin.Master" AutoEventWireup="true" CodeBehind="DashBoadAdmin.aspx.cs" Inherits="LibraryManagement.Admin.DashBoadAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="tieu_de" runat="server">
+    Quản trị viên
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
