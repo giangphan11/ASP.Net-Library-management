@@ -5,4 +5,5 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Trang</h2>
+    <h2>Tesst gethub</h2>
 </asp:Content>
