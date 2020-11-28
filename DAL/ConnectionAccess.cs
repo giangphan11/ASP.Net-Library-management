@@ -11,7 +11,7 @@ namespace DAL
     public class ConnectionAccess
     {
         protected SqlConnection conn = null;
-        private string strConnection = "Data Source=GIANGPHAN;Initial Catalog=QuanLyTV4;Integrated Security=True";
+        private string strConnection = "Data Source=DESKTOP-S6NEI1H;Initial Catalog=master;Integrated Security=True";
         public void openConnection()
         {
             if (conn == null)
