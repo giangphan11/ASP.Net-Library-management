@@ -81,6 +81,8 @@
     <Content Include="Admin\ATraSach.aspx" />
     <Content Include="Admin\Edit\SuaChucVu.aspx" />
     <Content Include="Admin\Edit\SuaDoiTuong.aspx" />
+    <Content Include="Admin\Edit\SuaTaiLieu.aspx" />
+    <Content Include="Admin\Edit\SuaTheLoai.aspx" />
     <Content Include="css\styleMasterLibrarian.css" />
     <Content Include="assets\AT-pro-black.png" />
     <Content Include="assets\AT-pro-logo.png" />
@@ -205,6 +207,20 @@
     </Compile>
     <Compile Include="Admin\Edit\SuaDoiTuong.aspx.designer.cs">
       <DependentUpon>SuaDoiTuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaTaiLieu.aspx.cs">
+      <DependentUpon>SuaTaiLieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaTaiLieu.aspx.designer.cs">
+      <DependentUpon>SuaTaiLieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaTheLoai.aspx.cs">
+      <DependentUpon>SuaTheLoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaTheLoai.aspx.designer.cs">
+      <DependentUpon>SuaTheLoai.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\SiteAdmin.Master.cs">
       <DependentUpon>SiteAdmin.Master</DependentUpon>
