@@ -6,4 +6,10 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Xin chào: <asp:Label ID="txtTen" runat="server" /></h2>
+    <script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.dashboard').toggleClass('active')
+        })
+    </script>
 </asp:Content>

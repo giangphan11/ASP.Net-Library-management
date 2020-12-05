@@ -50,4 +50,12 @@
     </asp:Table>
     <asp:Button ID="btnThem" Text="Thêm" OnClick="xuLyThem" runat="server"/>
     <p>&nbsp;</p><asp:Label ID="lblThongBao" runat="server" />
+
+     <script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.nhanvien').toggleClass('active')
+            console.log(1);
+        })
+    </script>
 </asp:Content>

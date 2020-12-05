@@ -3,11 +3,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="/css/nackbarCustom.css" type="text/css" />
+    <link rel="stylesheet" href="/css/styleMaster.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Quản lý chức vụ</h2>
     <p>&nbsp;</p>
-    <asp:GridView ID="gvChucVu_ad" runat="server" AutoGenerateColumns="false" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+    <asp:GridView class="card-content" ID="gvChucVu_ad" runat="server" AutoGenerateColumns="false" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
         <FooterStyle BackColor="White" ForeColor="#333333" />
         <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
@@ -55,4 +56,11 @@
 
     <asp:Label ID="lblThongBao" runat="server" />
 
+     <script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.chucvu').toggleClass('active')
+            console.log(1);
+        })
+    </script>
 </asp:Content>

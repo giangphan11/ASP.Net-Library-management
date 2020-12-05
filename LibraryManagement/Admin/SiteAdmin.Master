@@ -297,7 +297,7 @@
 	<div class="sidebar">
 		<ul class="sidebar-nav">
 			<li class="sidebar-nav-item">
-				<a href="/Admin/DashBoadAdmin.aspx" class="sidebar-nav-link active">
+				<a href="/Admin/DashBoadAdmin.aspx" class="sidebar-nav-link dashboard">
 					<div>
 						<i class="fas fa-tachometer-alt"></i>
 					</div>
@@ -307,7 +307,7 @@
 				</a>
 			</li>
 			<li class="sidebar-nav-item">
-				<a href="/Admin/AQLChucVu.aspx" class="sidebar-nav-link ">
+				<a href="/Admin/AQLChucVu.aspx" class="sidebar-nav-link chucvu">
 					<div>
 						<i class="fa fa-suitcase"></i>
 					</div>
@@ -315,7 +315,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Admin/AQLNhanVien.aspx" class="sidebar-nav-link">
+				<a href="/Admin/AQLNhanVien.aspx" class="sidebar-nav-link nhanvien">
 					<div>
 						<i class="fa fa-user-circle-o"></i>
 					</div>
@@ -323,15 +323,15 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Admin/AQLDoiTuong.aspx" class="sidebar-nav-link">
+				<a href="/Admin/AQLDoiTuong.aspx" class="sidebar-nav-link doituong">
 					<div>
 						<i class="fa fa-users"></i>
 					</div>
-					<span>Đố tượng</span>
+					<span>Đối tượng</span>
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Admin/AQLDocGia.aspx" class="sidebar-nav-link">
+				<a href="/Admin/AQLDocGia.aspx" class="sidebar-nav-link docgia">
 					<div>
 						<i class="fa fa-address-book"></i>
 					</div>
@@ -339,7 +339,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Admin/AQLTheLoai.aspx" class="sidebar-nav-link">
+				<a href="/Admin/AQLTheLoai.aspx" class="sidebar-nav-link theloai">
 					<div>
 						<i class="fa fa-book fa-fw"></i>
 					</div>
@@ -347,7 +347,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Admin/AQLTaiLieu.aspx" class="sidebar-nav-link">
+				<a href="/Admin/AQLTaiLieu.aspx" class="sidebar-nav-link tailieu">
 					<div>
 						<i class="fas fa-book-open"></i>
 					</div>
@@ -411,7 +411,7 @@
 		
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 	<script src="/scripts/index.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--%>
 	<!-- end import script -->
 		
 	</form>

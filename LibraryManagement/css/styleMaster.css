@@ -666,7 +666,8 @@ body {
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
     table td {

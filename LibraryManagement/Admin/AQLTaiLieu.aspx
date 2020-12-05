@@ -5,4 +5,13 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Trang</h2>
+
+
+     <script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tailieu').toggleClass('active')
+            console.log(1);
+        })
+    </script>
 </asp:Content>

@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChucVuBLL.cs" />
+    <Compile Include="DocGiaBLL.cs" />
+    <Compile Include="DoiTuongBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

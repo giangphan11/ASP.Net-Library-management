@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -81,6 +84,7 @@
     <Content Include="Admin\ATraSach.aspx" />
     <Content Include="Admin\Edit\SuaChucVu.aspx" />
     <Content Include="Admin\Edit\SuaDoiTuong.aspx" />
+    <Content Include="assets\calendar.png" />
     <Content Include="css\styleMasterLibrarian.css" />
     <Content Include="assets\AT-pro-black.png" />
     <Content Include="assets\AT-pro-logo.png" />
@@ -118,6 +122,7 @@
     <Content Include="Login\LoginForm.aspx" />
     <Content Include="css\style1.css" />
     <Content Include="scripts\index.js" />
+    <Content Include="scripts\jquery.js" />
     <Content Include="ViewAdmin\About.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
