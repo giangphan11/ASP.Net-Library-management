@@ -4,3 +4,9 @@ D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\obj\Debug\DTO.csproj.CoreCompileIn
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\obj\Debug\DTO.dll
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\obj\Debug\DTO.pdb
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\ASP.NET\BTL\ASP.Net-Library-management\DTO\bin\Debug\DTO.dll
+D:\ASP.NET\BTL\ASP.Net-Library-management\DTO\bin\Debug\DTO.pdb
+D:\ASP.NET\BTL\ASP.Net-Library-management\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\ASP.NET\BTL\ASP.Net-Library-management\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\ASP.NET\BTL\ASP.Net-Library-management\DTO\obj\Debug\DTO.dll
+D:\ASP.NET\BTL\ASP.Net-Library-management\DTO\obj\Debug\DTO.pdb

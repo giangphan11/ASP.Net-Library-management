@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LibraryManagement.Admin
-{
-
-
-    public partial class AQLChucVu
-    {
-
+namespace LibraryManagement.Admin {
+    
+    
+    public partial class AQLChucVu {
+        
         /// <summary>
         /// gvChucVu_ad control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace LibraryManagement.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvChucVu_ad;
-
+        
         /// <summary>
         /// txtMa control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace LibraryManagement.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMa;
-
+        
         /// <summary>
         /// txtTen control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace LibraryManagement.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTen;
-
+        
         /// <summary>
         /// btnThem control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace LibraryManagement.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnThem;
-
+        
         /// <summary>
         /// lblThongBao control.
         /// </summary>
