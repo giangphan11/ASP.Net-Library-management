@@ -36,7 +36,7 @@ namespace DAL
         }
         public void createDocument(TaiLieu tl)
         {
-            openConnection();
+            //openConnection();
             string sql = "INSERT INTO TaiLieu5 VALUES(@MaTLieu,@TenTLieu,@MaTLoai,@SLuong,@NXB,@NamXB,@TG)";
            // string sql1 = "INSERT INTO TaiLieu5 VALUES(N'TL09',N'ABC',N'L07',12,N'ABC',2000,N'shj')";
             SqlCommand cmd = truyVan1(sql);
