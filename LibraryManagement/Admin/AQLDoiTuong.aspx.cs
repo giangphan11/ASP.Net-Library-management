@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DTO;
+using BLL;
 
 namespace LibraryManagement.Admin
 {
@@ -11,7 +13,18 @@ namespace LibraryManagement.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            if (!IsPostBack)
+            {
+                loadData();
+            }
+        }
+        private void loadData()
+        {
+            DoiTuongBLL doiTuongBLL = new DoiTuongBLL();
+            List<DoiTuong> dsDT = doiTuongBLL.dsDoiTuong();
+            gvDoiTuong.DataSource = dsDT;
+            DataBind();
         }
     }
 }

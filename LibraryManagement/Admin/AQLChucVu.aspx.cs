@@ -33,6 +33,7 @@ namespace LibraryManagement.Admin
                 string ma = e.CommandArgument.ToString();
                 ChucVuBLL chucVuBLL = new ChucVuBLL();
                 lblThongBao.Text = chucVuBLL.xoaCV(ma);
+                loadData();
             }
         }
         protected void suaChucVu(object sender, CommandEventArgs e)

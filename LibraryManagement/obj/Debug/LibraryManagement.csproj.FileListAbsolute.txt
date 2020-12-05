@@ -63,6 +63,7 @@ D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\obj\Debug\LibraryMan
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\DAL.dll
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\DAL.pdb
+<<<<<<< HEAD
 D:\ASP.NET\BTL\ASP.Net-Library-management\LibraryManagement\bin\LibraryManagement.dll.config
 D:\ASP.NET\BTL\ASP.Net-Library-management\LibraryManagement\bin\LibraryManagement.dll
 D:\ASP.NET\BTL\ASP.Net-Library-management\LibraryManagement\bin\LibraryManagement.pdb
@@ -128,3 +129,6 @@ D:\ASP.NET\BTL\ASP.Net-Library-management\LibraryManagement\obj\Debug\LibraryMan
 D:\ASP.NET\BTL\ASP.Net-Library-management\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
 D:\ASP.NET\BTL\ASP.Net-Library-management\LibraryManagement\obj\Debug\LibraryManagement.dll
 D:\ASP.NET\BTL\ASP.Net-Library-management\LibraryManagement\obj\Debug\LibraryManagement.pdb
+=======
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\AjaxControlToolkit.dll
+>>>>>>> giangz

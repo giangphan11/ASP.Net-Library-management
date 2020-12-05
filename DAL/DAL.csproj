@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="ChucVuAccess.cs" />
     <Compile Include="ConnectionAccess.cs" />
+    <Compile Include="DocGiaAccess.cs" />
+    <Compile Include="DoiTuongAccess.cs" />
     <Compile Include="NhanVienAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiLieuAccess.cs" />

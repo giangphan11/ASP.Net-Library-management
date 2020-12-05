@@ -59,5 +59,4 @@
     <asp:Button ID="btnThem" Width="100px" runat="server" Text="Thêm" OnClick="btnThem_Click" />
 
     <asp:Label ID="messenger" runat="server" />
-
 </asp:Content>
