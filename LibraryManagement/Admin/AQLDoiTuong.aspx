@@ -21,6 +21,10 @@
         </Columns>
     </asp:GridView>
 
+
+
+    <h2>Tuan lam</h2>
+
      <script src="/scripts/jquery.js"></script>
     <script>
         $(document).ready(function () {
