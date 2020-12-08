@@ -12,7 +12,7 @@ namespace DTO
         public string TenDocGia { get; set; }
         public string MaTL { get; set; }
         public string TenTL { get; set; }
-        public DateTime NgayMuon { get; set; }
+        public string NgayMuon { get; set; }
         public int SoNgayMuonQH { get; set; }
     }
 }

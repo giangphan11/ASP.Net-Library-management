@@ -13,7 +13,8 @@
 
     <p>Nguời lập: <asp:Label ID="txtNguoiLap" runat="server" /></p>
     <p>&nbsp;</p>
-    <asp:GridView ID="gridView1" runat="server" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" GridLines="None">
+    <asp:GridView ID="gridView1" runat="server" AutoGenerateColumns="false"
+        BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" GridLines="None">
         <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
         <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
         <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
@@ -23,7 +24,21 @@
         <SortedAscendingHeaderStyle BackColor="#594B9C" />
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#33276A" />
+        <Columns>
+            <asp:BoundField DataField="MaDocGia" HeaderText="Mã độc giả" />
+            <asp:BoundField DataField="TenDocGia" HeaderText="Tên độc giả" />
+            <asp:BoundField DataField="MaTL" HeaderText="Mã tài liệu" />
+            <asp:BoundField DataField="TenTL" HeaderText="Tên tài liệu" />
+            <asp:BoundField DataField="NgayMuon" HeaderText="Ngày mượn" />
+            <asp:BoundField DataField="SoNgayMuonQH" HeaderText="Số ngày quá hạn" />
+        </Columns>
     </asp:GridView>
+    
+    <asp:Button ID="btnXuatFile" Text="Xuất file Word" runat="server" OnClick="btnExportWord_Click" />
+    <asp:Button ID="btnXuatPdf" Text="Xuất file Pdf" runat="server" OnClick="btnExportPDF_Click" />
+
+    <asp:Label ID="lblThongBao" runat="server" />
+
 
 <script src="/scripts/jquery.js"></script>
     <script>

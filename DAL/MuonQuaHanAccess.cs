@@ -18,7 +18,15 @@ namespace DAL
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-
+                MuonQuaHan muonQuaHan = new MuonQuaHan();
+                muonQuaHan.MaDocGia = reader.GetString(0);
+                muonQuaHan.TenDocGia = reader.GetString(1);
+                muonQuaHan.MaTL = reader.GetString(2);
+                muonQuaHan.TenTL = reader.GetString(3);
+                DateTime dt = reader.GetDateTime(4);
+                muonQuaHan.NgayMuon = dt.ToString("dd/MM/yyyy");
+                muonQuaHan.SoNgayMuonQH = reader.GetInt32(5);
+                ds.Add(muonQuaHan);
             }
             reader.Close();
 

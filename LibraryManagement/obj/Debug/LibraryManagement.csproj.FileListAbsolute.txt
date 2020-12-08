@@ -132,3 +132,6 @@ D:\ASP.NET\BTL\ASP.Net-Library-management\LibraryManagement\obj\Debug\LibraryMan
 =======
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\AjaxControlToolkit.dll
 >>>>>>> giangz
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\BouncyCastle.Crypto.dll
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\itextsharp.dll
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\itextsharp.xml

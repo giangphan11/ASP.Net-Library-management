@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
-    <h1>Thống kê tài liệu mượn quá hạn</h1>
+    <h1>Thống kê số lần mượn theo thể loại</h1>
     <p>&nbsp;</p>
     <h3>Thư viện trường Đại học Công nghiệp Hà Nội</h3>
     
@@ -14,7 +14,7 @@
     <p>Nguời lập: <asp:Label ID="txtNguoiLap" runat="server" /></p>
     <p>&nbsp;</p>
 
-
+    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 <script src="/scripts/jquery.js"></script>
     <script>
         $(document).ready(function () {
