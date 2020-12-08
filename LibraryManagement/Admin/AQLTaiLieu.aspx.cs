@@ -15,8 +15,12 @@ namespace LibraryManagement.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
+            {
                 LoadData();
+                loadDropTheLoai();
+            }
+                
         }
         protected void LoadData()
         {
@@ -25,19 +29,38 @@ namespace LibraryManagement.Admin
             grTaiLieu.DataSource = ds;
             DataBind();
         }
+        private void loadDropTheLoai()
+        {
+            List<TheLoai> dsTL = new TheLoaiBLL().getListCategory();
+            dropTheLoai.DataSource = dsTL;
+            dropTheLoai.DataValueField = "MaTLoai";
+            dropTheLoai.DataTextField = "TenTLoai";
+            DataBind();
+        }
+        protected void quanLyXoa(object o, CommandEventArgs e)
+        {
+            if(e.CommandName == "xoaTaiLieu")
+            {
+                string ma = e.CommandArgument.ToString();
+                taiLieuBLL = new TaiLieuBLL();
+                messenger.Text = taiLieuBLL.deleteDoc(ma);
+                LoadData();
+            }
+        }
         protected void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
                 taiLieuBLL = new TaiLieuBLL();
-                TaiLieu tl = new TaiLieu();
-                tl.MaTLieu = txtMaTLieu.Text;
-                tl.TenTLieu = txtTenTLieu.Text;
-                tl.MaTLoai = dropTLoai.Text;
-                tl.SLuong = int.Parse(txtSoLuong.Text);
-                tl.NXB = txtNXB.Text;
-                tl.NamXB = int.Parse(txtNamXB.Text);
-                taiLieuBLL.addDocument(tl);
+                TaiLieu taiLieu = new TaiLieu();
+                taiLieu.MaTLieu = txtMaTLieu.Text;
+                taiLieu.MaTLoai = dropTheLoai.SelectedValue;
+                taiLieu.TenTLieu = txtTenTLieu.Text;
+                taiLieu.SLuong = Int32.Parse(txtSoLuong.Text);
+                taiLieu.NXB = txtNXB.Text;
+                taiLieu.NamXB = Int32.Parse(txtNamXB.Text);
+                taiLieu.TG = txtTG.Text;
+                taiLieuBLL.addDocument(taiLieu);
                 LoadData();
                 messenger.Text = "Thêm thành công tài liệu.";
             }
@@ -46,5 +69,6 @@ namespace LibraryManagement.Admin
                 messenger.Text = "Thêm tài liệu thất bại" + e1.Message;
             }
         }
+
     }
 }

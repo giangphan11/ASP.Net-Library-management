@@ -35,9 +35,18 @@ namespace LibraryManagement.Admin
         {
             if (e.CommandName == "delete")
             {
-                string ma = (e.CommandArgument).ToString();
-                TheLoaiBLL theloaiBLL = new TheLoaiBLL();
-                theloaiBLL.delete(ma);
+                try
+                {
+                    string ma = (e.CommandArgument).ToString();
+                    TheLoaiBLL theloaiBLL = new TheLoaiBLL();
+                    theloaiBLL.delete(ma);
+                    loadData();
+                    messenger.Text = "Category deleted !@";
+                }
+                catch(Exception ex)
+                {
+                    messenger.Text = "Err: " + ex.Message;
+                }
             }
         }
         protected void update(object sender, CommandEventArgs e)
@@ -53,15 +62,24 @@ namespace LibraryManagement.Admin
         }
         protected void btnThem_Click(object sender, EventArgs e)
         {
-            TheLoaiBLL theLoaiBLL = new TheLoaiBLL();
-            TheLoai category = new TheLoai();
-            category.MaTLoai = txtMa.Text;
-            category.TenTLoai = txtTen.Text;
-            category.GhiChu = txtGhiChu.Text;
-            theLoaiBLL.create(category);
-            messenger.Text = theLoaiBLL.create(category);
-            loadData();
-            clear();
+            try
+            {
+                TheLoaiBLL theLoaiBLL = new TheLoaiBLL();
+                TheLoai category = new TheLoai();
+                category.MaTLoai = txtMa.Text;
+                category.TenTLoai = txtTen.Text;
+                category.GhiChu = txtGhiChu.Text;
+                theLoaiBLL.create(category);
+                messenger.Text = theLoaiBLL.create(category);
+                loadData();
+                clear();
+                messenger.Text = "Category Inserted !";
+            }
+            catch(Exception ex)
+            {
+                messenger.Text = ex.Message;
+            }
+            
 
         }
 

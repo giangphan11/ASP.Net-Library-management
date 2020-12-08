@@ -32,31 +32,57 @@ namespace DAL
                 tl.TG = (string)rd["tg"];
                 list.Add(tl);
             }
+            rd.Close();
             return list;
+        }
+        public string deleteDoc(string ma)
+        {
+            try
+            {
+
+                SqlCommand command = truyVan1("delete from TaiLieu5 where MaTLieu = @ma");
+                command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+                command.ExecuteNonQuery();
+                return "Document deleted !";
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+        public string updateDocument(TaiLieu taiLieu)
+        {
+            try
+            {
+                SqlCommand command = truyVan1("update TaiLieu5 set TenTLieu=@ten,MaTLoai=@maTLoai,SLuong=@sl,NXB=@nxb,NamXB=@namXB,TG=@tg where MaTLieu=@ma");
+                command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = taiLieu.MaTLieu;
+                command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = taiLieu.TenTLieu;
+                command.Parameters.Add("@maTLoai", SqlDbType.NVarChar).Value = taiLieu.MaTLoai;
+                command.Parameters.Add("@nxb", SqlDbType.NVarChar).Value = taiLieu.NXB;
+                command.Parameters.Add("@tg", SqlDbType.NVarChar).Value = taiLieu.TG;
+                command.Parameters.Add("@sl", SqlDbType.Int).Value = taiLieu.SLuong;
+                command.Parameters.Add("@namXB", SqlDbType.Int).Value = taiLieu.NamXB;
+                command.ExecuteNonQuery();
+                return "Document Updated !";
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
         }
         public void createDocument(TaiLieu tl)
         {
-            //openConnection();
-            string sql = "INSERT INTO TaiLieu5 VALUES(@MaTLieu,@TenTLieu,@MaTLoai,@SLuong,@NXB,@NamXB,@TG)";
+            string sql = "INSERT INTO TaiLieu5 VALUES(@ma,@tenTL,@maTL,@sl,@nhaXB,@namXB,@tacgia)";
            // string sql1 = "INSERT INTO TaiLieu5 VALUES(N'TL09',N'ABC',N'L07',12,N'ABC',2000,N'shj')";
             SqlCommand cmd = truyVan1(sql);
 
-            //cmd.Parameters.AddWithValue("MaTLieu", tl.MaTLieu);
-            //cmd.Parameters.AddWithValue("TenTLieu", tl.TenTLieu);
-            //cmd.Parameters.AddWithValue("MaTLoai", tl.MaTLoai);
-            //cmd.Parameters.AddWithValue("SLuong", tl.SLuong);
-            //cmd.Parameters.AddWithValue("NXB", tl.NXB);
-            //cmd.Parameters.AddWithValue("NamXB", tl.NamXB);
-            //cmd.Parameters.AddWithValue("TG", tl.TG);
-
-            cmd.Parameters.Add("@MaTLieu", SqlDbType.NVarChar).Value = tl.MaTLoai;
-            cmd.Parameters.Add("@TenTLieu", SqlDbType.NVarChar).Value = tl.TenTLieu;
-            cmd.Parameters.Add("@MaTLoai", SqlDbType.NVarChar).Value = tl.MaTLoai;
-            cmd.Parameters.Add("@SLuong", SqlDbType.Int).Value = tl.SLuong;
-            cmd.Parameters.Add("@NXB", SqlDbType.NVarChar).Value = tl.NXB;
-            cmd.Parameters.Add("@NamXB", SqlDbType.Int).Value = tl.NamXB;
-            cmd.Parameters.Add("@TG", SqlDbType.NVarChar).Value = tl.TG;
-
+            cmd.Parameters.Add("@ma", SqlDbType.NVarChar).Value = tl.MaTLieu;
+            cmd.Parameters.Add("@tenTL", SqlDbType.NVarChar).Value = tl.TenTLieu;
+            cmd.Parameters.Add("@maTL", SqlDbType.NVarChar).Value = tl.MaTLoai;
+            cmd.Parameters.Add("@sl", SqlDbType.Int).Value = tl.SLuong;
+            cmd.Parameters.Add("@nhaXB", SqlDbType.NVarChar).Value = tl.NXB;
+            cmd.Parameters.Add("@namXB", SqlDbType.Int).Value = tl.NamXB;
+            cmd.Parameters.Add("@tacgia", SqlDbType.NVarChar).Value = tl.TG;
             cmd.ExecuteNonQuery();
         }
     }

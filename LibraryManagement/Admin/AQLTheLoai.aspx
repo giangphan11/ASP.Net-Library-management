@@ -59,4 +59,12 @@
     <asp:Button ID="btnThem" Width="100px" runat="server" Text="Thêm" OnClick="btnThem_Click" />
 
     <asp:Label ID="messenger" runat="server" />
+
+    <script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.theloai').toggleClass('active')
+            console.log(1);
+        })
+    </script>
 </asp:Content>

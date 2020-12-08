@@ -25,14 +25,14 @@
             <asp:BoundField HeaderText="Năm xuất bản" DataField="NamXB"/>
             <asp:BoundField HeaderText="Tác giả" DataField="TG"/>
 
-          <%--  <asp:TemplateField HeaderText="Xoá">
+            <asp:TemplateField HeaderText="Xoá">
                 <ItemTemplate>
                     <asp:Button ID="btnXoaTaiLieu" CommandName="xoaTaiLieu" Text="Xoá tài liệu"
                         CommandArgument='<%# Bind("MaTLieu") %>' runat="server"
                         OnCommand="quanLyXoa"
                         OnClientClick="return confirm('Xác nhận xoá ?')"/>
                 </ItemTemplate>
-            </asp:TemplateField>--%>
+            </asp:TemplateField>
 
             <%--<asp:TemplateField HeaderText="Sửa">
                 <ItemTemplate>
@@ -55,16 +55,16 @@
         </tr>
          <tr>
             <td>Mã thể loại: </td>
-            <td><asp:TextBox ID="dropTLoai" runat="server"/></td>
+            <td><asp:DropDownList ID="dropTheLoai" runat="server" /></td>
         </tr> <tr>
             <td>Số lượng: </td>
-            <td><asp:TextBox ID="txtSoLuong" runat="server"/></td>
+            <td><asp:TextBox ID="txtSoLuong" TextMode="Number" runat="server"/></td>
         </tr> <tr>
             <td>Nhà xuất bản: </td>
             <td><asp:TextBox ID="txtNXB" runat="server"/></td>
         </tr> <tr>
             <td>Năm xuất bản: </td>
-            <td><asp:TextBox ID="txtNamXB" runat="server"/></td>
+            <td><asp:TextBox ID="txtNamXB" TextMode="Number" runat="server"/></td>
         </tr> <tr>
             <td>Tác giả: </td>
             <td><asp:TextBox ID="txtTG" runat="server"/></td>
@@ -76,4 +76,12 @@
 
     <asp:Label ID="messenger" runat="server" />
 
+
+    <script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tailieu').toggleClass('active')
+            console.log(1);
+        })
+    </script>
 </asp:Content>

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LibraryManagement.Admin {
-    
-    
-    public partial class AQLTaiLieu {
-        
+namespace LibraryManagement.Admin
+{
+
+
+    public partial class AQLTaiLieu
+    {
+
         /// <summary>
         /// grTaiLieu control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grTaiLieu;
-        
+
         /// <summary>
         /// txtMaTLieu control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMaTLieu;
-        
+
         /// <summary>
         /// txtTenTLieu control.
         /// </summary>
@@ -38,16 +40,16 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTenTLieu;
-        
+
         /// <summary>
-        /// dropTLoai control.
+        /// dropTheLoai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dropTLoai;
-        
+        protected global::System.Web.UI.WebControls.DropDownList dropTheLoai;
+
         /// <summary>
         /// txtSoLuong control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSoLuong;
-        
+
         /// <summary>
         /// txtNXB control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNXB;
-        
+
         /// <summary>
         /// txtNamXB control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNamXB;
-        
+
         /// <summary>
         /// txtTG control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTG;
-        
+
         /// <summary>
         /// btnThem control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnThem;
-        
+
         /// <summary>
         /// messenger control.
         /// </summary>

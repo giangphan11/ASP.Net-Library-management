@@ -84,12 +84,10 @@
     <Content Include="Admin\ATraSach.aspx" />
     <Content Include="Admin\Edit\SuaChucVu.aspx" />
     <Content Include="Admin\Edit\SuaDoiTuong.aspx" />
-<<<<<<< HEAD
+
     <Content Include="Admin\Edit\SuaTaiLieu.aspx" />
     <Content Include="Admin\Edit\SuaTheLoai.aspx" />
-=======
-    <Content Include="assets\calendar.png" />
->>>>>>> giangz
+
     <Content Include="css\styleMasterLibrarian.css" />
     <Content Include="assets\AT-pro-black.png" />
     <Content Include="assets\AT-pro-logo.png" />

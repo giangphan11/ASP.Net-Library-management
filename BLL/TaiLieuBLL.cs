@@ -19,5 +19,9 @@ namespace BLL
         {
             tlAccess.createDocument(tl);
         }
+        public string deleteDoc(string ma)
+        {
+            return tlAccess.deleteDoc(ma);
+        }
     }
 }
