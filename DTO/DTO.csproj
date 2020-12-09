@@ -44,8 +44,14 @@
     <Compile Include="ChucVu.cs" />
     <Compile Include="DocGia.cs" />
     <Compile Include="DoiTuong.cs" />
+    <Compile Include="MuonQuaHan.cs" />
+    <Compile Include="MuonSach.cs" />
+    <Compile Include="MuonTheoTheLoai.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaiLieu.cs" />
+    <Compile Include="TheLoai.cs" />
+    <Compile Include="TopSach.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

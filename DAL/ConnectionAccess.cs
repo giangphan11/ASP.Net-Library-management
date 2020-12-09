@@ -37,18 +37,14 @@ namespace DAL
             command.Connection = conn;
             return command;
         }
-        //public string truyVan2(string name,string sql)
-        //{
-        //    try
-        //    {
-        //        openConnection();
-        //        SqlCommand
-        //        return name + " thành công !";
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        return "Lỗi: " + ex.Message;
-        //    }
-        //}
+        public SqlCommand truyVan2(string sql)
+        {
+            SqlCommand command = new SqlCommand();
+            openConnection();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = sql;
+            command.Connection = conn;
+            return command;
+        }
     }
 }

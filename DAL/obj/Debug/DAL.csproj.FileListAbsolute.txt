@@ -7,3 +7,12 @@ D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.csproj.CoreCompileIn
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.dll
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\DAL\obj\Debug\DAL.pdb
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\bin\Debug\DAL.dll
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\bin\Debug\DAL.pdb
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\bin\Debug\DTO.dll
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\bin\Debug\DTO.pdb
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\obj\Debug\DAL.dll
+D:\ASP.NET\BTL\ASP.Net-Library-management\DAL\obj\Debug\DAL.pdb
