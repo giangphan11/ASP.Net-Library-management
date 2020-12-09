@@ -379,7 +379,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Admin/AMuonSach.aspx" class="sidebar-nav-link">
+				<a href="/Admin/AMuonSach.aspx" class="sidebar-nav-link muonsach">
 					<div>
 						<i class="fa fa-chevron-circle-left"></i>
 					</div>
@@ -387,7 +387,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Admin/ATraSach.aspx" class="sidebar-nav-link">
+				<a href="/Admin/ATraSach.aspx" class="sidebar-nav-link trasach">
 					<div>
 						<i class="fa fa-chevron-circle-right"></i>
 					</div>

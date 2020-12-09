@@ -45,6 +45,7 @@
     <Compile Include="DocGiaBLL.cs" />
     <Compile Include="DoiTuongBLL.cs" />
     <Compile Include="MuonQuaHanBLL.cs" />
+    <Compile Include="MuonTheoTheLoaiBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiLieuBLL.cs" />
