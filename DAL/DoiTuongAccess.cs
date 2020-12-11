@@ -26,5 +26,34 @@ namespace DAL
             reader.Close();
             return dsDt;
         }
+        public string themDoiTuong(DoiTuong dt)
+        {
+            try
+            {
+                SqlCommand command = truyVan1("insert into DoiTuong5 values(@ma, @ten)");
+                command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = dt.MaDT;
+                command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = dt.TenDT;
+                command.ExecuteNonQuery();
+                return "Thêm thành công !";
+            }
+            catch(Exception ex)
+            {
+                return "Lỗi: "+ex.Message;
+            }
+        }
+        public string xoaDT(string ma)
+        {
+            try
+            {
+                SqlCommand command = truyVan1("delete from DoiTuong5 where MaDTuong = @ma");
+                command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+                command.ExecuteNonQuery();
+                return ma + " deleted !";
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }

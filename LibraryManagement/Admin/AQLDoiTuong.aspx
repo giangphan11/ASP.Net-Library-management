@@ -5,7 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Quản lý đối tượng</h2>
-    <asp:GridView ID="gvDoiTuong" runat="server" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+    <asp:GridView ID="gvDoiTuong" runat="server" AutoGenerateColumns="false"
+        BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
         <FooterStyle BackColor="White" ForeColor="#333333" />
         <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
@@ -18,14 +19,31 @@
         <Columns>
             <asp:BoundField DataField="MaDT" HeaderText="Mã" />
             <asp:BoundField DataField="TenDT" HeaderText="Tên" />
+            <asp:TemplateField HeaderText="Xoá đối tượng">
+                <ItemTemplate>
+                    <asp:Button ID="btnXoa" 
+                        Text="Xoá" 
+                        CommandName="xoaDt" 
+                        CommandArgument='<%#Bind("MaDT") %>' 
+                        OnClientClick="return confirm('are you sure about that??')" 
+                        OnCommand="xuLyXoa"
+                        runat="server" />
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
     </asp:GridView>
-
-
-
-    <h2>Tuan lam</h2>
-
-     <script src="/scripts/jquery.js"></script>
+    <asp:Label ID="lblThongBao" runat="server" />
+    <br />
+    <h2>Thêm đối tượng</h2>
+    <asp:Table runat="server">
+        <asp:TableRow>
+            <asp:TableCell>Mã đối tượng: </asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="txtMaDT" runat="server" />
+            </asp:TableCell></asp:TableRow><asp:TableRow>
+            <asp:TableCell>Tên đối tượng: </asp:TableCell><asp:TableCell>
+                <asp:TextBox ID="txtTenDT" runat="server" />
+            </asp:TableCell></asp:TableRow></asp:Table><asp:Button ID="btnThem" Text="Thêm" runat="server" OnClick="btnThem_Click" /><script src="/scripts/jquery.js"></script>
     <script>
         $(document).ready(function () {
             $('.doituong').toggleClass('active')

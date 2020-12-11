@@ -26,5 +26,26 @@ namespace LibraryManagement.Admin
             gvDoiTuong.DataSource = dsDT;
             DataBind();
         }
+        protected void xuLyXoa(object o, CommandEventArgs e)
+        {
+            if(e.CommandName == "xoaDt")
+            {
+                string ma = e.CommandArgument.ToString();
+                lblThongBao.Text = new DoiTuongBLL().xoaDT(ma);
+                loadData();
+            }
+        }
+
+        protected void btnThem_Click(object sender, EventArgs e)
+        {
+            string ma = txtMaDT.Text;
+            string ten = txtTenDT.Text;
+            DoiTuong dt = new DoiTuong();
+            dt.MaDT = ma;
+            dt.TenDT = ten;
+            lblThongBao.Text = "";
+            lblThongBao.Text = new DoiTuongBLL().themDoiTuong(dt);
+            loadData();
+        }
     }
 }
