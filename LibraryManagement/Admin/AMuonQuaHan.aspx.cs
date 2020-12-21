@@ -18,7 +18,7 @@ namespace LibraryManagement.Admin
         {
             if(!IsPostBack)
                 loadData();
-            if (Session["nhanvien"] == null)
+            if (Application["nhanvien"] == null)
             {
                 Server.Transfer("/Login/LoginForm.aspx");
             }
@@ -26,7 +26,7 @@ namespace LibraryManagement.Admin
             {
                 DateTime dt = DateTime.Now;
                 txtNgayLap.Text = dt.ToString("dd/MM/yyyy");
-                NhanVien nv = (NhanVien)Session["nhanvien"];
+                NhanVien nv = (NhanVien)Application["nhanvien"];
                 txtNguoiLap.Text = nv.TenNV;
             }
         }

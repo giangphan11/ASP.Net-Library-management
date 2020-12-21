@@ -11,7 +11,7 @@ namespace LibraryManagement.Login
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["nhanvien"] = null;
+            Application["nhanvien"] = null;
             Response.Redirect("/Login/LoginForm.aspx");
         }
     }

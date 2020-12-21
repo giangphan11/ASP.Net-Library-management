@@ -1,0 +1,32 @@
+﻿body {
+    *box-sizing:border-box;
+}
+#container{
+    width: 100%;
+    height: auto;
+}
+#container #idHead{
+    width:100%;
+    height:100px;
+    background-color:aquamarine;
+}
+#container #idBody{
+    width: 100%;
+    height:300px;
+}
+#container #idBody #left{
+    width:50%;
+    float:left;
+    height:100%;
+    background-color:antiquewhite;
+}
+#container #idBody #right{
+    width:50%;
+    height:100%;
+    background-color:blueviolet;
+    float:right;
+}
+#container #tb1{
+    width: 100%;
+    height: auto;
+}

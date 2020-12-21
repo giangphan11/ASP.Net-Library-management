@@ -6,7 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL;
 using DTO;
-
+using System.Data;
+using System.Data.SqlClient;
 namespace LibraryManagement.Admin
 {
     public partial class AQLTaiLieu : System.Web.UI.Page
@@ -19,14 +20,36 @@ namespace LibraryManagement.Admin
             {
                 LoadData();
                 loadDropTheLoai();
+                loadDroTacGia();
             }
                 
         }
         protected void LoadData()
         {
-            taiLieuBLL= new TaiLieuBLL();
-            List<TaiLieu> ds = taiLieuBLL.getListDocument();
-            grTaiLieu.DataSource = ds;
+            List<TaiLieu> dsTl = new List<TaiLieu>();
+            SqlConnection conn = new SqlConnection(@"Data Source=GIANGPHAN;Initial Catalog=QuanLyTV4;Integrated Security=True");
+            conn.Open();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "SELECT *FROM TaiLieu5";
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                TaiLieu tl = new TaiLieu();
+                tl.MaTLieu = (string)reader["matlieu"];
+                tl.TenTLieu = (string)reader["tentlieu"];
+                tl.MaTLoai = (string)reader["matloai"];
+                tl.SLuong = (int)reader["sluong"];
+                tl.NXB = (string)reader["nxb"];
+                tl.NamXB = (int)reader["namxb"];
+                tl.Anh = ResolveUrl("~/images/tailieu/"+ (string)reader["anh"]); 
+                tl.MaTG = (string)reader["matg"];
+                dsTl.Add(tl);
+            }
+            reader.Close();
+            grTaiLieu.DataSource = dsTl;
             DataBind();
         }
         private void loadDropTheLoai()
@@ -47,6 +70,17 @@ namespace LibraryManagement.Admin
                 LoadData();
             }
         }
+
+
+        private void loadDroTacGia()
+        {
+            List<TacGia> dsTg = new TacGiaBLL().getTacGias();
+            drTacGia.DataSource = dsTg;
+            drTacGia.DataValueField = "MaTG";
+            drTacGia.DataTextField = "TenTG";
+            DataBind();
+        }
+
         protected void btnThem_Click(object sender, EventArgs e)
         {
             try
@@ -59,7 +93,7 @@ namespace LibraryManagement.Admin
                 taiLieu.SLuong = Int32.Parse(txtSoLuong.Text);
                 taiLieu.NXB = txtNXB.Text;
                 taiLieu.NamXB = Int32.Parse(txtNamXB.Text);
-                taiLieu.TG = txtTG.Text;
+                taiLieu.MaTG = drTacGia.SelectedValue;
                 taiLieuBLL.addDocument(taiLieu);
                 LoadData();
                 messenger.Text = "Thêm thành công tài liệu.";
@@ -70,5 +104,9 @@ namespace LibraryManagement.Admin
             }
         }
 
+        protected void btnQuanLyTacGia_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("/Admin/AQLTacGia.aspx");
+        }
     }
 }

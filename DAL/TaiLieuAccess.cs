@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace DAL
 {
     public class TaiLieuAccess : ConnectionAccess
@@ -29,7 +28,8 @@ namespace DAL
                 tl.SLuong = (int)rd["sluong"];
                 tl.NXB = (string)rd["nxb"];
                 tl.NamXB = (int)rd["namxb"];
-                tl.TG = (string)rd["tg"];
+                tl.Anh =(string)rd["anh"];
+                tl.MaTG = (string)rd["matg"];
                 list.Add(tl);
             }
             rd.Close();
@@ -54,12 +54,13 @@ namespace DAL
         {
             try
             {
-                SqlCommand command = truyVan1("update TaiLieu5 set TenTLieu=@ten,MaTLoai=@maTLoai,SLuong=@sl,NXB=@nxb,NamXB=@namXB,TG=@tg where MaTLieu=@ma");
+                SqlCommand command = truyVan1("update TaiLieu5 set TenTLieu=@ten,MaTLoai=@maTLoai,SLuong=@sl,NXB=@nxb,NamXB=@namXB,Anh = @anh,TG=@tg where MaTLieu=@ma");
                 command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = taiLieu.MaTLieu;
                 command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = taiLieu.TenTLieu;
                 command.Parameters.Add("@maTLoai", SqlDbType.NVarChar).Value = taiLieu.MaTLoai;
                 command.Parameters.Add("@nxb", SqlDbType.NVarChar).Value = taiLieu.NXB;
-                command.Parameters.Add("@tg", SqlDbType.NVarChar).Value = taiLieu.TG;
+                command.Parameters.Add("@tg", SqlDbType.NVarChar).Value = taiLieu.MaTG;
+                command.Parameters.Add("@anh", SqlDbType.NVarChar).Value = taiLieu.Anh;
                 command.Parameters.Add("@sl", SqlDbType.Int).Value = taiLieu.SLuong;
                 command.Parameters.Add("@namXB", SqlDbType.Int).Value = taiLieu.NamXB;
                 command.ExecuteNonQuery();
@@ -72,7 +73,7 @@ namespace DAL
         }
         public void createDocument(TaiLieu tl)
         {
-            string sql = "INSERT INTO TaiLieu5 VALUES(@ma,@tenTL,@maTL,@sl,@nhaXB,@namXB,@tacgia)";
+            string sql = "INSERT INTO TaiLieu5 VALUES(@ma,@tenTL,@maTL,@sl,@nhaXB,@namXB,@anh,@tacgia)";
            // string sql1 = "INSERT INTO TaiLieu5 VALUES(N'TL09',N'ABC',N'L07',12,N'ABC',2000,N'shj')";
             SqlCommand cmd = truyVan1(sql);
 
@@ -82,7 +83,8 @@ namespace DAL
             cmd.Parameters.Add("@sl", SqlDbType.Int).Value = tl.SLuong;
             cmd.Parameters.Add("@nhaXB", SqlDbType.NVarChar).Value = tl.NXB;
             cmd.Parameters.Add("@namXB", SqlDbType.Int).Value = tl.NamXB;
-            cmd.Parameters.Add("@tacgia", SqlDbType.NVarChar).Value = tl.TG;
+            cmd.Parameters.Add("@anh", SqlDbType.NVarChar).Value = tl.Anh;
+            cmd.Parameters.Add("@tacgia", SqlDbType.NVarChar).Value = tl.MaTG;
             cmd.ExecuteNonQuery();
         }
     }

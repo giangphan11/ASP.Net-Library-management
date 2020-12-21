@@ -17,7 +17,7 @@ namespace LibraryManagement
         protected void Page_Load(object sender, EventArgs e)
         {
             snackbarScript = GenerateSnackbarJS();
-            if (Session["nhanvien"] != null)
+            if (Application["nhanvien"] != null)
             {
                 Server.Transfer("/Login/ControlForm.aspx");
                 //Response.Redirect("/Home1.aspx");
@@ -47,7 +47,7 @@ namespace LibraryManagement
             {
                 if (nv.Username.Equals(uname) && nv.PassWord.Equals(pass))
                 {
-                    Session["nhanvien"] = nv;
+                    Application["nhanvien"] = nv;
                     flag = true;
                     Server.Transfer("/Login/ControlForm.aspx");
                 }

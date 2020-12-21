@@ -48,7 +48,10 @@
     <Compile Include="MuonSach.cs" />
     <Compile Include="MuonTheoTheLoai.cs" />
     <Compile Include="NhanVien.cs" />
+    <Compile Include="PhieuMuon.cs" />
+    <Compile Include="PhieuMuonChiTiet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TacGia.cs" />
     <Compile Include="TaiLieu.cs" />
     <Compile Include="TheLoai.cs" />
     <Compile Include="TopSach.cs" />

@@ -14,11 +14,12 @@ namespace DTO
         public int SLuong { get; set; }
         public string NXB { get; set; }
         public int NamXB { get; set; }
-        public string TG { get; set; }
+        public string Anh { get; set; }
+        public string MaTG { get; set; }
 
         public TaiLieu()
         {
-
+            this.Anh = "d.png";
         }
         public TaiLieu(string maTlieu,string tenTlieu,string maTloai,int sl, string nxb,int namXB,string tg)
         {
@@ -28,7 +29,7 @@ namespace DTO
             this.SLuong = sl;
             this.NXB = nxb;
             this.NamXB = namXB;
-            this.TG = tg;
+            this.MaTG = tg;
 
         }
     }

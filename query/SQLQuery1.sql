@@ -75,3 +75,30 @@ go
 exec TK_MUON_THEO_TL '12/23/2020', '12/30/2020'
 go
 /* TOP 10 TÀI LIỆU MƯỢN NHIỀU NHẤT*/
+CREATE PROC [dbo].[PROC_TOP10]
+AS
+ BEGIN
+	SELECT TOP(10) TenTLieu,TenTLoai,SLuong,GhiChu 
+	FROM dbo.TheLoai5 INNER JOIN dbo.TaiLieu5 ON TaiLieu5.MaTLoai = TheLoai5.MaTLoai 
+	INNER JOIN dbo.PhieuMuonChiTiet5 ON PhieuMuonChiTiet5.MaS = TaiLieu5.MaTLieu
+	 WHERE NgayTra BETWEEN'1990-02-02' AND GETDATE()
+	 GROUP BY TenTLieu,TenTLoai,SLuong,GhiChu 
+	ORDER BY SLuong DESC
+ END
+GO
+EXEC PROC_TOP10
+GO
+/* TOP 10 TÀI LIỆU MƯỢN NHIỀU NHẤT THEO DATE*/
+CREATE PROCEDURE [dbo].[PROC_TOP10TL] (@START DATE, @END DATE)
+  AS
+  BEGIN
+	SELECT TOP(10) TenTLieu,TenTLoai,SLuong,GhiChu 
+	FROM dbo.TheLoai5 INNER JOIN dbo.TaiLieu5 ON TaiLieu5.MaTLoai = TheLoai5.MaTLoai 
+	INNER JOIN dbo.PhieuMuonChiTiet5 ON PhieuMuonChiTiet5.MaS = TaiLieu5.MaTLieu
+	
+	 WHERE NgayTra BETWEEN @START AND @END
+	 GROUP BY TenTLieu,TenTLoai,SLuong,GhiChu 
+	ORDER BY SLuong DESC
+  END
+GO
+EXEC PROC_TOP10TL '01/01/1999', '01/01/2020'

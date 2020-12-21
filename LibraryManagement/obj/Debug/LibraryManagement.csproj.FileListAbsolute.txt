@@ -62,8 +62,8 @@ D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\DTO.pdb
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\itextsharp.xml
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\bin\DAL.pdb
+D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojAssemblyReference.cache
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CoreCompileInputs.cache
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.dll
 D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
-D:\K1-Nam 4\ASP.net\BTL\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojAssemblyReference.cache

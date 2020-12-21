@@ -97,6 +97,7 @@
     <Content Include="Admin\Edit\SuaDoiTuong.aspx" />
     <Content Include="Admin\Edit\SuaTaiLieu.aspx" />
     <Content Include="Admin\Edit\SuaTheLoai.aspx" />
+    <Content Include="Admin\AQLTacGia.aspx" />
     <Content Include="css\styleMasterLibrarian.css" />
     <Content Include="assets\AT-pro-black.png" />
     <Content Include="assets\AT-pro-logo.png" />
@@ -105,6 +106,8 @@
     <Content Include="CheckLogin.aspx" />
     <Content Include="css\nackbarCustom.css" />
     <Content Include="css\styleMaster.css" />
+    <Content Include="css\style_muon_sach.css" />
+    <Content Include="css\style_tra_sach.css" />
     <Content Include="fontawesome-free\css\all.css" />
     <Content Include="fontawesome-free\css\all.min.css" />
     <Content Include="fontawesome-free\css\brands.css" />
@@ -123,6 +126,9 @@
     <Content Include="fontawesome-free\webfonts\fa-brands-400.svg" />
     <Content Include="fontawesome-free\webfonts\fa-regular-400.svg" />
     <Content Include="fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="images\pencil.png" />
+    <Content Include="images\printer.png" />
+    <Content Include="images\se2.png" />
     <Content Include="Librarian\DashBoadLib.aspx" />
     <Content Include="Librarian\TTMuonQuaHan.aspx" />
     <Content Include="Librarian\TTMuonSach.aspx" />
@@ -258,6 +264,13 @@
     <Compile Include="Admin\ATraSach.aspx.designer.cs">
       <DependentUpon>ATraSach.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AQLTacGia.aspx.cs">
+      <DependentUpon>AQLTacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AQLTacGia.aspx.designer.cs">
+      <DependentUpon>AQLTacGia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CheckLogin.aspx.cs">
       <DependentUpon>CheckLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -377,9 +390,7 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

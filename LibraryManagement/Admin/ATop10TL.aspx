@@ -23,6 +23,15 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#383838" />
     </asp:GridView>
+    <p>&nbsp;</p>
+    <h3>Chọn thời gian:</h3>
+    Bắt đầu: <asp:TextBox ID="txtDate1" TextMode="Date" runat="server" OnTextChanged="txtDate1_TextChanged" />
+    Kết thúc:<asp:TextBox ID="txtDate2" TextMode="Date" runat="server" OnTextChanged="txtDate2_TextChanged" />
+    <p>&nbsp;</p>
+    <asp:Button ID="btnXem" runat="server" Text ="Xem" OnClick="btnXem_Click" />
+    <asp:Button ID="btnInPdf" runat="server" Text ="Xuất file pdf" />
+    <asp:Button ID="btnInWord" runat="server" Text ="Xuất file Word" />
+    
     <script src="/scripts/jquery.js"></script>
     <script>
         $(document).ready(function () {

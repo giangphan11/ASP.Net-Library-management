@@ -29,7 +29,7 @@
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link">
-					<i class="fas fa-bars" onclick="collapseSidebar()"></i>
+					<i class="fas fa-bars" ></i>
 				</a>
 			</li>
 			<li class="nav-item">
@@ -415,5 +415,15 @@
 	<!-- end import script -->
 		
 	</form>
+
+
+	<script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$('.docgia').toggleClass('active')
+            body.classList.toggle('sidebar-expand')
+            console.log(1);
+        })
+    </script>
 </body>
 </html>

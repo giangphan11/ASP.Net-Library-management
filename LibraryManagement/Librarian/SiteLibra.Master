@@ -294,7 +294,7 @@
 	<div class="sidebar">
 		<ul class="sidebar-nav">
 			<li class="sidebar-nav-item">
-				<a href="/Librarian/DashBoadLib.aspx" class="sidebar-nav-link active">
+				<a href="/Librarian/DashBoadLib.aspx" class="sidebar-nav-link dashboard">
 					<div>
 						<i class="fas fa-tachometer-alt"></i>
 					</div>
@@ -358,5 +358,15 @@
 	<script src="/scripts/index.js"></script>
 	<!-- end import script -->
     </form>
+
+
+	<script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$('.docgia').toggleClass('active')
+            body.classList.toggle('sidebar-expand')
+            console.log(1);
+        })
+    </script>
 </body>
 </html>

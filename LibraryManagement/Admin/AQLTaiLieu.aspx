@@ -6,7 +6,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Quản lý Tài Liệu</h2>
     <p>&nbsp;</p>
-    <asp:GridView ID="grTaiLieu" runat="server" AutoGenerateColumns="false" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+    <asp:GridView ID="grTaiLieu" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
         <FooterStyle BackColor="White" ForeColor="#333333" />
         <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
@@ -23,7 +23,9 @@
             <asp:BoundField HeaderText="Số lượng" DataField="SLuong"/>
             <asp:BoundField HeaderText="Nhà xuất bản" DataField="NXB"/>
             <asp:BoundField HeaderText="Năm xuất bản" DataField="NamXB"/>
-            <asp:BoundField HeaderText="Tác giả" DataField="TG"/>
+            <asp:ImageField HeaderText="Ảnh" DataImageUrlField="Anh" />
+            <asp:BoundField HeaderText="Tác giả" DataField="MaTG"/>
+            
 
             <asp:TemplateField HeaderText="Xoá">
                 <ItemTemplate>
@@ -67,11 +69,11 @@
             <td><asp:TextBox ID="txtNamXB" TextMode="Number" runat="server"/></td>
         </tr> <tr>
             <td>Tác giả: </td>
-            <td><asp:TextBox ID="txtTG" runat="server"/></td>
+            <td><asp:DropDownList ID="drTacGia" runat="server" /></td>
         </tr>
         
     </table>
-    
+    <asp:Button ID="btnQuanLyTacGia" runat="server" Text="Quản lý tác giả" OnClick="btnQuanLyTacGia_Click" />
     <asp:Button ID="btnThem" runat="server" Text="Thêm" OnClick="btnThem_Click" />
 
     <asp:Label ID="messenger" runat="server" />

@@ -47,9 +47,13 @@
     <Compile Include="MuonQuaHanBLL.cs" />
     <Compile Include="MuonTheoTheLoaiBLL.cs" />
     <Compile Include="NhanVienBLL.cs" />
+    <Compile Include="PhieuMuonSachBUS.cs" />
+    <Compile Include="PhieuTraSachBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TacGiaBLL.cs" />
     <Compile Include="TaiLieuBLL.cs" />
     <Compile Include="TheLoaiBLL.cs" />
+    <Compile Include="TopSachBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
