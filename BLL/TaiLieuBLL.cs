@@ -15,13 +15,30 @@ namespace BLL
         {
             return tlAccess.getListDocument();
         }
+
+        public List<TaiLieu> getListDocument(string ten)
+        {
+            return tlAccess.getListDocument(ten);
+        }
+
+
+
         public void addDocument(TaiLieu tl)
         {
             tlAccess.createDocument(tl);
         }
+        public TaiLieu GetTaiLieuTheoMa(string ma)
+        {
+            return tlAccess.getTaiLieuTheoMa(ma);
+        }
         public string deleteDoc(string ma)
         {
             return tlAccess.deleteDoc(ma);
+        }
+
+        public string suaTaiLieu(TaiLieu taiLieu)
+        {
+            return tlAccess.suaTaiLieu(taiLieu);
         }
     }
 }

@@ -20,9 +20,19 @@ namespace BLL
             return doiTuongAccess.xoaDT(ma);
         }
 
+        public DoiTuong layDoiTuong(string ma)
+        {
+            return doiTuongAccess.layDoiTuongTheoMa(ma);
+        }
+
         public string themDoiTuong(DoiTuong dt)
         {
             return doiTuongAccess.themDoiTuong(dt);
+        }
+
+        public string suaDoiTuong(DoiTuong doiTuong)
+        {
+            return doiTuongAccess.suaDoiTuong(doiTuong);
         }
     }
 }

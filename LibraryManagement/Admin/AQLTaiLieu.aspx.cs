@@ -13,7 +13,7 @@ namespace LibraryManagement.Admin
     public partial class AQLTaiLieu : System.Web.UI.Page
     {
         TaiLieuBLL taiLieuBLL;
-
+        const string srcImage = "~/images/tailieu/";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,29 +26,11 @@ namespace LibraryManagement.Admin
         }
         protected void LoadData()
         {
-            List<TaiLieu> dsTl = new List<TaiLieu>();
-            SqlConnection conn = new SqlConnection(@"Data Source=GIANGPHAN;Initial Catalog=QuanLyTV4;Integrated Security=True");
-            conn.Open();
-            SqlCommand command = new SqlCommand();
-            command.CommandType = CommandType.Text;
-            command.CommandText = "SELECT *FROM TaiLieu5";
-            command.Connection = conn;
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
+            List<TaiLieu> dsTl = new TaiLieuBLL().getListDocument();
+            foreach(TaiLieu tl in dsTl)
             {
-                TaiLieu tl = new TaiLieu();
-                tl.MaTLieu = (string)reader["matlieu"];
-                tl.TenTLieu = (string)reader["tentlieu"];
-                tl.MaTLoai = (string)reader["matloai"];
-                tl.SLuong = (int)reader["sluong"];
-                tl.NXB = (string)reader["nxb"];
-                tl.NamXB = (int)reader["namxb"];
-                tl.Anh = ResolveUrl("~/images/tailieu/"+ (string)reader["anh"]); 
-                tl.MaTG = (string)reader["matg"];
-                dsTl.Add(tl);
-            }
-            reader.Close();
+                tl.Anh = ResolveUrl(srcImage + tl.Anh);
+            } 
             grTaiLieu.DataSource = dsTl;
             DataBind();
         }
@@ -71,6 +53,17 @@ namespace LibraryManagement.Admin
             }
         }
 
+        protected void quanLySua(object o, CommandEventArgs e)
+        {
+            if(e.CommandName == "suaTaiLieu")
+            {
+                string ma = e.CommandArgument.ToString();
+                TaiLieu taiLieu = new TaiLieuBLL().GetTaiLieuTheoMa(ma);
+                Session["tailieu"] = taiLieu;
+                Response.Redirect("/Admin/Edit/SuaTaiLieu.aspx");
+            }
+        }
+
 
         private void loadDroTacGia()
         {
@@ -83,8 +76,12 @@ namespace LibraryManagement.Admin
 
         protected void btnThem_Click(object sender, EventArgs e)
         {
+            messenger.Text = "";
             try
             {
+                
+                string path = Server.MapPath(srcImage);
+                fileAnh.PostedFile.SaveAs(path + fileAnh.FileName);
                 taiLieuBLL = new TaiLieuBLL();
                 TaiLieu taiLieu = new TaiLieu();
                 taiLieu.MaTLieu = txtMaTLieu.Text;
@@ -94,6 +91,7 @@ namespace LibraryManagement.Admin
                 taiLieu.NXB = txtNXB.Text;
                 taiLieu.NamXB = Int32.Parse(txtNamXB.Text);
                 taiLieu.MaTG = drTacGia.SelectedValue;
+                taiLieu.Anh= fileAnh.FileName;
                 taiLieuBLL.addDocument(taiLieu);
                 LoadData();
                 messenger.Text = "Thêm thành công tài liệu.";
@@ -107,6 +105,25 @@ namespace LibraryManagement.Admin
         protected void btnQuanLyTacGia_Click(object sender, EventArgs e)
         {
             Server.Transfer("/Admin/AQLTacGia.aspx");
+        }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string ten = txtTimKiem.Text;
+            if (ten.Length > 0)
+            {
+                List<TaiLieu> dsTl = new TaiLieuBLL().getListDocument("%"+ten+"%");
+                foreach (TaiLieu tl in dsTl)
+                {
+                    tl.Anh = ResolveUrl(srcImage + tl.Anh);
+                }
+                grTaiLieu.DataSource = dsTl;
+                DataBind();
+            }
+            else
+            {
+                LoadData();
+            }
         }
     }
 }

@@ -26,5 +26,10 @@ namespace BLL
         {
             return vuAccess.cv(ma);
         }
+
+        public string suaChucVu(ChucVu chucVu)
+        {
+            return vuAccess.suaChucVu(chucVu);
+        }
     }
 }

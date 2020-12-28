@@ -20,8 +20,8 @@ namespace LibraryManagement.Admin
 
         private void loadData()
         {
-            TheLoaiBLL chucVuBLL = new TheLoaiBLL();
-            List<TheLoai> list = chucVuBLL.getListCategory();
+            TheLoaiBLL theLoaiBLL = new TheLoaiBLL();
+            List<TheLoai> list = theLoaiBLL.getListCategory();
             grd.DataSource = list;
             DataBind();
         }
@@ -57,7 +57,7 @@ namespace LibraryManagement.Admin
                 string ma = e.CommandArgument.ToString();
                 TheLoaiBLL chucVuBLL = new TheLoaiBLL();
                 Session["theloai"] = chucVuBLL.findById(ma);
-                Response.Redirect("/Admin/Edit/SuaChucVu.aspx");
+                Response.Redirect("/Admin/Edit/SuaTheLoai.aspx");
             }
         }
         protected void btnThem_Click(object sender, EventArgs e)
@@ -86,6 +86,22 @@ namespace LibraryManagement.Admin
         protected void grd_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string ten = txtTimKiem.Text;
+            if (ten.Length > 0)
+            {
+                TheLoaiBLL theLoaiBLL = new TheLoaiBLL();
+                List<TheLoai> list = theLoaiBLL.getListCategory("%"+ten+"%");
+                grd.DataSource = list;
+                DataBind();
+            }
+            else
+            {
+                loadData();
+            }
         }
     }
 }

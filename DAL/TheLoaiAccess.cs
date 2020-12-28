@@ -30,6 +30,28 @@ namespace DAL
             }
             return list;
         }
+
+        public List<TheLoai> getListCategory(string ten)
+        {
+            List<TheLoai> list = new List<TheLoai>();
+            openConnection();
+            SqlCommand sqlCommand = truyVan1("select * from TheLoai5 WHERE TenTLoai like @ten");
+            sqlCommand.Parameters.Add("@ten", SqlDbType.NVarChar).Value = ten;
+            SqlDataReader rd = sqlCommand.ExecuteReader();
+            while (rd.Read())
+            {
+                TheLoai category = new TheLoai();
+                category.MaTLoai = rd.GetString(0);
+                category.TenTLoai = rd.GetString(1);
+                category.GhiChu = rd.GetString(2);
+
+                list.Add(category);
+            }
+            return list;
+        }
+
+
+
         public TheLoai findByID(string MaTLoai)
         {
             TheLoai category = new TheLoai();
@@ -59,6 +81,32 @@ namespace DAL
                 return "Err: " + e1.Message;
             }
         }
+
+
+
+        public string suaTheLoai(TheLoai theLoai)
+        {
+            try
+            {
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "update TheLoai5 set TenTLoai=@ten,GhiChu=@ghiChu where MaTLoai=@ma";
+                command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = theLoai.MaTLoai;
+                command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = theLoai.TenTLoai;
+                command.Parameters.Add("@ghiChu", SqlDbType.NVarChar).Value = theLoai.GhiChu;
+                command.Connection = conn;
+                command.ExecuteNonQuery();
+                return "Sửa thành công !";
+            }
+            catch(Exception ex)
+            {
+                return "ERR: "+ex.Message;
+            }
+        }
+
+
+
+
         public string createCategory(TheLoai c)
         {
             try

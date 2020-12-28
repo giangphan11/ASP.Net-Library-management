@@ -41,6 +41,41 @@ namespace DAL
                 return "Lỗi: "+ex.Message;
             }
         }
+
+        public DoiTuong layDoiTuongTheoMa(string ma)
+        {
+            DoiTuong doiTuong = new DoiTuong();
+            try
+            {
+                SqlCommand command = truyVan1("SELECT * FROM DoiTuong5 WHERE MaDTuong =@ma");
+                command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = ma;
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    doiTuong.MaDT = reader.GetString(0);
+                    doiTuong.TenDT = reader.GetString(1);
+                }
+                reader.Close();
+                return doiTuong;
+            }
+            catch { }
+            return null;
+        }
+        public string suaDoiTuong(DoiTuong dt)
+        {
+            try
+            {
+                SqlCommand command = truyVan1("UPDATE DoiTuong5 set TenDTuong = @ten WHERE MaDTuong = @ma");
+                command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = dt.TenDT;
+                command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = dt.MaDT;
+                command.ExecuteNonQuery();
+                return "Sửa đối tượng thành công !";
+            }
+            catch(Exception ex)
+            {
+                return "ERR: " + ex.Message;
+            }
+        }
         public string xoaDT(string ma)
         {
             try

@@ -15,7 +15,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
 	<!-- End import lib -->
     <link rel="stylesheet" type="text/css" href="/css/styleMasterLibrarian.css"/>
-    
+    <script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            //$('.docgia').toggleClass('active')
+            body.classList.toggle('sidebar-expand')
+            console.log(1);
+        })
+    </script>
 </head>
 <body class="overlay-scrollbar">
 	<form id="form2" runat="server" >
@@ -360,13 +367,6 @@
     </form>
 
 
-	<script src="/scripts/jquery.js"></script>
-    <script>
-        $(document).ready(function () {
-            //$('.docgia').toggleClass('active')
-            body.classList.toggle('sidebar-expand')
-            console.log(1);
-        })
-    </script>
+	
 </body>
 </html>

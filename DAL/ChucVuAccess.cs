@@ -26,6 +26,21 @@ namespace DAL
             }
             return dsChucVu;
         }
+        public string suaChucVu(ChucVu chucVu)
+        {
+            try
+            {
+                SqlCommand command = truyVan1("update ChucVu5 set TenCVu = @ten where MaCVu = @ma");
+                command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = chucVu.TenChucVu;
+                command.Parameters.Add("@ma", SqlDbType.NVarChar).Value = chucVu.MaChucVu;
+                command.ExecuteNonQuery();
+                return "Sửa chức vụ thành công!";
+            }
+            catch(Exception ex)
+            {
+                return "ERR: "+ ex.Message;
+            }
+        }
         public ChucVu cv(string ma)
         {
             ChucVu cv = new ChucVu();

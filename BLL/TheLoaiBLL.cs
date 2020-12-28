@@ -16,6 +16,10 @@ namespace BLL
         {
             return categoryAccess.getListCategory();
         }
+        public List<TheLoai> getListCategory(string ten)
+        {
+            return categoryAccess.getListCategory(ten);
+        }
         public string delete(string ma)
         {
             return categoryAccess.delete(ma);
@@ -27,6 +31,11 @@ namespace BLL
         public TheLoai findById(string ma)
         {
             return categoryAccess.findByID(ma);
+        }
+
+        public string suaTheLoai(TheLoai tl)
+        {
+            return categoryAccess.suaTheLoai(tl);
         }
     }
 }

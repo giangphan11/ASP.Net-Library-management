@@ -30,6 +30,17 @@
                         runat="server" />
                 </ItemTemplate>
             </asp:TemplateField>
+
+            <asp:TemplateField HeaderText="Sửa đối tượng">
+                <ItemTemplate>
+                    <asp:Button ID="btnSua" 
+                        Text="Sửa" 
+                        CommandName="suaDt" 
+                        CommandArgument='<%#Bind("MaDT") %>' 
+                        OnCommand="xuLySua"
+                        runat="server" />
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
     </asp:GridView>
     <asp:Label ID="lblThongBao" runat="server" />
@@ -43,7 +54,10 @@
             </asp:TableCell></asp:TableRow><asp:TableRow>
             <asp:TableCell>Tên đối tượng: </asp:TableCell><asp:TableCell>
                 <asp:TextBox ID="txtTenDT" runat="server" />
-            </asp:TableCell></asp:TableRow></asp:Table><asp:Button ID="btnThem" Text="Thêm" runat="server" OnClick="btnThem_Click" /><script src="/scripts/jquery.js"></script>
+            </asp:TableCell></asp:TableRow>
+
+    </asp:Table>
+    <asp:Button ID="btnThem" Text="Thêm" runat="server" OnClick="btnThem_Click" /><script src="/scripts/jquery.js"></script>
     <script>
         $(document).ready(function () {
             $('.doituong').toggleClass('active')

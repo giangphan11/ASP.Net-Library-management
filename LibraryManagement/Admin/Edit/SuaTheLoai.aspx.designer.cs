@@ -7,9 +7,65 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LibraryManagement.Admin.Edit {
-    
-    
-    public partial class SuaTheLoai {
+namespace LibraryManagement.Admin.Edit
+{
+
+
+    public partial class SuaTheLoai
+    {
+
+        /// <summary>
+        /// lb1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb1;
+
+        /// <summary>
+        /// txtMa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMa;
+
+        /// <summary>
+        /// txtTen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTen;
+
+        /// <summary>
+        /// txtGhiChu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGhiChu;
+
+        /// <summary>
+        /// btnSua control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSua;
+
+        /// <summary>
+        /// btnHuy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnHuy;
     }
 }

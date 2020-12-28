@@ -28,13 +28,25 @@ namespace LibraryManagement.Admin
         }
         protected void xuLyXoa(object o, CommandEventArgs e)
         {
-            if(e.CommandName == "xoaDt")
+            if (e.CommandName == "xoaDt")
             {
                 string ma = e.CommandArgument.ToString();
                 lblThongBao.Text = new DoiTuongBLL().xoaDT(ma);
                 loadData();
             }
         }
+
+        protected void xuLySua(object o, CommandEventArgs e)
+        {
+            if (e.CommandName == "suaDt")
+            {
+                string ma = e.CommandArgument.ToString();
+                DoiTuong doiTuong = new DoiTuongBLL().layDoiTuong(ma);
+                Session["doituong"] = doiTuong;
+                Response.Redirect("/Admin/Edit/SuaDoiTuong.aspx");
+            }
+        }
+
 
         protected void btnThem_Click(object sender, EventArgs e)
         {

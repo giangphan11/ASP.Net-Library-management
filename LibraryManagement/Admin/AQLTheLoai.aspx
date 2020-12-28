@@ -5,6 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
    <h2>Quản lý thể loại</h2>
+    <asp:TextBox placeholder="Tìm kiếm theo tên" ID="txtTimKiem" runat="server" />
+    <asp:Button ID="btnTimKiem" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
+    
     <p>&nbsp;</p>
     <asp:GridView ID="grd" runat="server" AutoGenerateColumns="false" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" OnSelectedIndexChanged="grd_SelectedIndexChanged">
         <FooterStyle BackColor="White" ForeColor="#333333" />

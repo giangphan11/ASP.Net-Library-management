@@ -39,10 +39,12 @@
 		</ul>
 		<!-- end nav left -->
 		<!-- form -->
-		<div class="navbar-search">
+
+		<%--<div class="navbar-search">
 			<input type="text" name="Search" class="navbar-search-input" placeholder="What you looking for...">
 			<i class="fas fa-search"></i>
-		</div>
+		</div>--%>
+
 		<!-- end form -->
 		<!-- nav right -->
 		<ul class="navbar-nav nav-right">

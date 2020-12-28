@@ -4,9 +4,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="tieu_de" runat="server">Độc giả
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Quản lý độc giả</h2>
+    <asp:TextBox placeholder="Tìm kiếm theo tên" ID="txtTimKiem" runat="server" />
+    <asp:Button ID="btnTimKiem" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
+
     <asp:GridView ID="gvDocGia_a" AutoGenerateColumns="false" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
         <FooterStyle BackColor="#CCCCCC" />
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -25,6 +29,7 @@
             <asp:BoundField HeaderText="Mã đối tượng" DataField="MaDT" />
             <asp:BoundField HeaderText="Ngày cấp" DataField="NgayCap" />
             <asp:BoundField HeaderText="Ngày hết hạn" DataField="NgayGiaHan" />
+            <asp:ImageField ControlStyle-Width="100" ControlStyle-Height = "100" HeaderText="Ảnh" DataImageUrlField="Anh" />
             <asp:TemplateField HeaderText="Xoá độc giả">
                 <ItemTemplate>
                     <asp:Button ID="btnXoaDocGia" runat="server" Text="Xoá" OnCommand="xuLyXoa" 
@@ -112,8 +117,13 @@
                     onclick="ibtCal3_Click" />
             </td>
         </tr>
+        <tr>
+            <td>Ảnh: </td>
+            <td><asp:FileUpload runat="server" ID="fileAnhUpload" /></td>
+        </tr>
     </table>
-    <asp:Button Text="Thêm" ID="btnThem" runat="server" />
+    <asp:Label runat="server" ID="lblKetQua" />
+    <asp:Button Text="Thêm" ID="btnThem" runat="server" OnClick="btnThem_Click" />
 
 
      <script src="/scripts/jquery.js"></script>

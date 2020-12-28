@@ -15,9 +15,26 @@ namespace BLL
         {
             return docGiaAccess.layDanhSachDocGia();
         }
+        public string suaDocGia(DocGia docGia)
+        {
+            return docGiaAccess.suaDocGia(docGia);
+        }
+        public DocGia layDocGia(string ma)
+        {
+            return docGiaAccess.layDocGiaTheoMa(ma);
+        }
         public string xoaDocGia(string ma)
         {
             return docGiaAccess.xoaDocGia(ma);
+        }
+        public string themDocGia(DocGia docGia)
+        {
+            return docGiaAccess.themDocGia(docGia);
+        }
+
+        public List<DocGia> dsDocGia(string ten)
+        {
+            return docGiaAccess.layDanhSachDocGia(ten);
         }
     }
 }

@@ -5,6 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Quản lý Tài Liệu</h2>
+
+    <asp:TextBox placeholder="Tìm kiếm theo tên" ID="txtTimKiem" runat="server" />
+    <asp:Button ID="btnTimKiem" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
     <p>&nbsp;</p>
     <asp:GridView ID="grTaiLieu" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
         <FooterStyle BackColor="White" ForeColor="#333333" />
@@ -23,25 +26,29 @@
             <asp:BoundField HeaderText="Số lượng" DataField="SLuong"/>
             <asp:BoundField HeaderText="Nhà xuất bản" DataField="NXB"/>
             <asp:BoundField HeaderText="Năm xuất bản" DataField="NamXB"/>
-            <asp:ImageField HeaderText="Ảnh" DataImageUrlField="Anh" />
+            <asp:ImageField ControlStyle-Width="100" ControlStyle-Height = "100" HeaderText="Ảnh" DataImageUrlField="Anh" />
             <asp:BoundField HeaderText="Tác giả" DataField="MaTG"/>
             
-
-            <asp:TemplateField HeaderText="Xoá">
+            <asp:TemplateField HeaderText="Xoá tài liệu">
                 <ItemTemplate>
-                    <asp:Button ID="btnXoaTaiLieu" CommandName="xoaTaiLieu" Text="Xoá tài liệu"
+                    <asp:Button ID="btnXoaTaiLieu" CommandName="xoaTaiLieu" Text="Xoá"
                         CommandArgument='<%# Bind("MaTLieu") %>' runat="server"
                         OnCommand="quanLyXoa"
                         OnClientClick="return confirm('Xác nhận xoá ?')"/>
                 </ItemTemplate>
             </asp:TemplateField>
 
-            <%--<asp:TemplateField HeaderText="Sửa">
+            
+            <asp:TemplateField HeaderText="Sửa tài liệu">
                 <ItemTemplate>
-                    <asp:Button ID="btnSuaTaiLieu" OnCommand="suaTaiLieu" CommandName="suaTaiLieu" Text="Sửa tài liệu"
-                        CommandArgument='<%# Bind("MaTLieu") %>' runat="server"/>
+                    <asp:Button ID="btnSuaTaiLieu" CommandName="suaTaiLieu" Text="Sửa"
+                        CommandArgument='<%# Bind("MaTLieu") %>' runat="server"
+                        OnCommand="quanLySua"
+                        />
                 </ItemTemplate>
-            </asp:TemplateField>--%>
+            </asp:TemplateField>
+
+
         </Columns>
     </asp:GridView>
     <p>&nbsp;</p>
@@ -70,6 +77,10 @@
         </tr> <tr>
             <td>Tác giả: </td>
             <td><asp:DropDownList ID="drTacGia" runat="server" /></td>
+        </tr>
+        <tr>
+            <td>Ảnh:</td>
+            <td><asp:FileUpload ID="fileAnh" runat="server" /></td>
         </tr>
         
     </table>

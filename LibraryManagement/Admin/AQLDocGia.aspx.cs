@@ -11,6 +11,7 @@ namespace LibraryManagement.Admin
 {
     public partial class AQLDocGia : System.Web.UI.Page
     {
+        const string srcImage = "~/images/docgia/";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -25,6 +26,10 @@ namespace LibraryManagement.Admin
             DocGiaBLL docGiaBLL = new DocGiaBLL();
             List<DocGia> dsDocGia = docGiaBLL.dsDocGia();
             gvDocGia_a.DataSource = dsDocGia;
+            foreach(DocGia docGia in dsDocGia)
+            {
+                docGia.Anh = ResolveUrl(srcImage + docGia.Anh);
+            }
             DataBind();
         }
         private void loadDropDoiTuong()
@@ -50,7 +55,10 @@ namespace LibraryManagement.Admin
         {
             if (e.CommandName == "sua")
             {
-
+                string ma = e.CommandArgument.ToString();
+                DocGia docGia = new DocGiaBLL().layDocGia(ma);
+                Session["docgia"] = docGia;
+                Response.Redirect("/Admin/Edit/SuaDocGia.aspx");
             }
         }
 
@@ -67,6 +75,46 @@ namespace LibraryManagement.Admin
         protected void ibtCal3_Click(object sender, ImageClickEventArgs e)
         {
 
+        }
+
+        protected void btnThem_Click(object sender, EventArgs e)
+        {
+            DocGia docGia = new DocGia();
+            string path = Server.MapPath(srcImage);
+            docGia.MaDG = txtMaDG.Text;
+            docGia.TenDG = txtTen.Text;
+            docGia.MaDT = dropDownDoiTuong.SelectedValue;
+            docGia.GT = radGT.SelectedValue;
+            docGia.NgayCap = txtNgayCap.Text;
+            docGia.NgaySinh = txtNgaySinh.Text;
+            docGia.NgayGiaHan = txtNgayHetHan.Text;
+            if (fileAnhUpload.HasFile)
+            {
+                fileAnhUpload.PostedFile.SaveAs(path + fileAnhUpload.FileName);
+                docGia.Anh = fileAnhUpload.FileName;
+            }
+            lblKetQua.Text = new DocGiaBLL().themDocGia(docGia);
+            loadGridView();
+        }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string ten = txtTimKiem.Text;
+            if (ten.Length > 0)
+            {
+                DocGiaBLL docGiaBLL = new DocGiaBLL();
+                List<DocGia> dsDocGia = docGiaBLL.dsDocGia("%"+ten.Trim()+"%");
+                gvDocGia_a.DataSource = dsDocGia;
+                foreach (DocGia docGia in dsDocGia)
+                {
+                    docGia.Anh = ResolveUrl(srcImage + docGia.Anh);
+                }
+                DataBind();
+            }
+            else
+            {
+                loadGridView();
+            }
         }
     }
 }

@@ -5,6 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
     <h2>Quản lý nhân viên</h2>
+
+    <asp:TextBox placeholder="Tìm kiếm theo tên" ID="txtTimKiem" runat="server" />
+    <asp:Button ID="btnTimKiem" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
     <p>&nbsp;</p>
     <asp:GridView ID="gvNhanVien_ad" AutoGenerateColumns="false" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
         <FooterStyle BackColor="White" ForeColor="#000066" />
@@ -22,11 +25,17 @@
             <asp:BoundField HeaderText="Mã chức vụ" DataField="MaCV" />
             <asp:BoundField HeaderText="Tên đăng nhập" DataField="Username" />
             <asp:BoundField HeaderText="Mật khẩu" DataField="PassWord" />
-            <asp:BoundField HeaderText="Ảnh" DataField="Anh" />
+            <asp:ImageField ControlStyle-Width="100" ControlStyle-Height = "100" HeaderText="Ảnh" DataImageUrlField="Anh" />
             <asp:TemplateField HeaderText="Xoá nhân viên">
                 <ItemTemplate>
                     <asp:Button ID="btnXoaNV" Text="Xoá" CommandName="xoanv" CommandArgument='<%#Bind("MaNV") %>'
                         runat="server" OnClientClick="return confirm('Xác nhận xoá')" OnCommand="xu_ly_XoaNV"/>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Sửa nhân viên">
+                <ItemTemplate>
+                    <asp:Button ID="btnSua" Text="Sửa" CommandName="suanv" CommandArgument='<%#Bind("MaNV") %>'
+                        runat="server"  OnCommand="xu_ly_sua"/>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

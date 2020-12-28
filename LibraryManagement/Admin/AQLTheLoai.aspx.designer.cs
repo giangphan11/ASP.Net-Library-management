@@ -7,11 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LibraryManagement.Admin {
-    
-    
-    public partial class AQLTheLoai {
-        
+namespace LibraryManagement.Admin
+{
+
+
+    public partial class AQLTheLoai
+    {
+
+        /// <summary>
+        /// txtTimKiem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTimKiem;
+
+        /// <summary>
+        /// btnTimKiem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnTimKiem;
+
         /// <summary>
         /// grd control.
         /// </summary>
@@ -20,7 +40,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grd;
-        
+
         /// <summary>
         /// txtMa control.
         /// </summary>
@@ -29,7 +49,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMa;
-        
+
         /// <summary>
         /// txtTen control.
         /// </summary>
@@ -38,7 +58,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTen;
-        
+
         /// <summary>
         /// txtGhiChu control.
         /// </summary>
@@ -47,7 +67,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGhiChu;
-        
+
         /// <summary>
         /// btnThem control.
         /// </summary>
@@ -56,7 +76,7 @@ namespace LibraryManagement.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnThem;
-        
+
         /// <summary>
         /// messenger control.
         /// </summary>

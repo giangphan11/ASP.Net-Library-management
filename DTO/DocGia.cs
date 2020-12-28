@@ -11,9 +11,14 @@ namespace DTO
         public string MaDG { get; set; }
         public string TenDG { get; set; }
         public string GT { get; set; }
-        public DateTime NgaySinh { get; set; }
+        public string NgaySinh { get; set; }
         public string MaDT { get; set; }
-        public DateTime NgayCap { get; set; }
-        public DateTime NgayGiaHan { get; set; }
+        public string NgayCap { get; set; }
+        public string NgayGiaHan { get; set; }
+        public string Anh { get; set; }
+        public DocGia()
+        {
+            this.Anh = "df.png";
+        }
     }
 }

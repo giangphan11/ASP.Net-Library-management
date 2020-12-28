@@ -94,7 +94,9 @@
     <Content Include="Admin\AMuonSach.aspx" />
     <Content Include="Admin\ATraSach.aspx" />
     <Content Include="Admin\Edit\SuaChucVu.aspx" />
+    <Content Include="Admin\Edit\SuaDocGia.aspx" />
     <Content Include="Admin\Edit\SuaDoiTuong.aspx" />
+    <Content Include="Admin\Edit\SuaNhanVien.aspx" />
     <Content Include="Admin\Edit\SuaTaiLieu.aspx" />
     <Content Include="Admin\Edit\SuaTheLoai.aspx" />
     <Content Include="Admin\AQLTacGia.aspx" />
@@ -222,12 +224,26 @@
     <Compile Include="Admin\Edit\SuaChucVu.aspx.designer.cs">
       <DependentUpon>SuaChucVu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Edit\SuaDocGia.aspx.cs">
+      <DependentUpon>SuaDocGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaDocGia.aspx.designer.cs">
+      <DependentUpon>SuaDocGia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Edit\SuaDoiTuong.aspx.cs">
       <DependentUpon>SuaDoiTuong.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Edit\SuaDoiTuong.aspx.designer.cs">
       <DependentUpon>SuaDoiTuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaNhanVien.aspx.cs">
+      <DependentUpon>SuaNhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit\SuaNhanVien.aspx.designer.cs">
+      <DependentUpon>SuaNhanVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Edit\SuaTaiLieu.aspx.cs">
       <DependentUpon>SuaTaiLieu.aspx</DependentUpon>
