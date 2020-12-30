@@ -31,6 +31,10 @@ namespace DAL
             return list;
         }
 
+        
+
+        
+
         public List<TheLoai> getListCategory(string ten)
         {
             List<TheLoai> list = new List<TheLoai>();

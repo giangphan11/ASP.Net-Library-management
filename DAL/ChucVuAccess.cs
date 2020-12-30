@@ -26,6 +26,24 @@ namespace DAL
             }
             return dsChucVu;
         }
+
+        public List<ChucVu> getListChucVu(string ten)
+        {
+            List<ChucVu> dsChucVu = new List<ChucVu>();
+            openConnection();
+            SqlCommand sqlCommand = truyVan1("select * from ChucVu5 where TenCVu like @ten");
+            sqlCommand.Parameters.Add("@ten", SqlDbType.NVarChar).Value = ten;
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+            while (reader.Read())
+            {
+                ChucVu cv = new ChucVu();
+                cv.MaChucVu = reader.GetString(0);
+                cv.TenChucVu = reader.GetString(1);
+                dsChucVu.Add(cv);
+            }
+            return dsChucVu;
+        }
+
         public string suaChucVu(ChucVu chucVu)
         {
             try

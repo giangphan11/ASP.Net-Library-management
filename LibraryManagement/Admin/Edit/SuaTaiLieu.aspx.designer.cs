@@ -105,15 +105,6 @@ namespace LibraryManagement.Admin.Edit
         protected global::System.Web.UI.WebControls.FileUpload fileAnh;
 
         /// <summary>
-        /// btnSua control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSua;
-
-        /// <summary>
         /// btnHuyBo control.
         /// </summary>
         /// <remarks>
@@ -121,5 +112,14 @@ namespace LibraryManagement.Admin.Edit
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnHuyBo;
+
+        /// <summary>
+        /// btnSua control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSua;
     }
 }

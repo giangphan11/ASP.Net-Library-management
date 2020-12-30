@@ -59,7 +59,7 @@ namespace LibraryManagement.Admin.Edit
 
         protected void btnHuyBo_Click(object sender, EventArgs e)
         {
-            Response.Redirect("");
+            Response.Redirect("/Admin/AQLTaiLieu.aspx");
         }
 
         protected void btnSua_Click(object sender, EventArgs e)

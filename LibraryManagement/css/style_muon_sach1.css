@@ -2,21 +2,16 @@
 body {
 }
 #container {
-    background-color: #a29bfe;
+   
     width:100%;
     height:auto;
 }
-.submit {
-    border: 1px solid #563d7c;
-    border-radius: 5px;
-    color: white;
-    padding: 5px 10px 5px 25px;
-    background: url('/images/pencil.png') left 3px top 5px no-repeat #563d7c;
+#container #dau{
+	width: 100%;
 }
-
 #container #than{
     width:100%;
-    height:500px;
+    height:630px;
 }
 #container #left{
     width:50%;

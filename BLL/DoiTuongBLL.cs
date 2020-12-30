@@ -15,6 +15,11 @@ namespace BLL
             return doiTuongAccess.dsDoiTuong();
         }
 
+        public List<DoiTuong> dsDoiTuong(string ten)
+        {
+            return doiTuongAccess.dsDoiTuong(ten);
+        }
+
         public string xoaDT(string ma)
         {
             return doiTuongAccess.xoaDT(ma);

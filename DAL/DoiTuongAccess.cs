@@ -26,6 +26,25 @@ namespace DAL
             reader.Close();
             return dsDt;
         }
+
+
+        public List<DoiTuong> dsDoiTuong(string ten)
+        {
+            List<DoiTuong> dsDt = new List<DoiTuong>();
+            SqlCommand command = truyVan1("select * from DoiTuong5 where TenDTuong like @ten");
+            command.Parameters.Add("@ten", SqlDbType.NVarChar).Value = ten;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                DoiTuong dt = new DoiTuong();
+                dt.MaDT = reader.GetString(0);
+                dt.TenDT = reader.GetString(1);
+                dsDt.Add(dt);
+            }
+            reader.Close();
+            return dsDt;
+        }
+
         public string themDoiTuong(DoiTuong dt)
         {
             try

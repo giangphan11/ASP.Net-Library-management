@@ -311,12 +311,14 @@ namespace LibraryManagement
         }
 
 
-        
-
-
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             alertz(GridView1.SelectedRow.Cells[1].Text);
+        }
+
+        protected void btnSua_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -59,5 +59,21 @@ namespace LibraryManagement.Admin
             lblThongBao.Text = new DoiTuongBLL().themDoiTuong(dt);
             loadData();
         }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string ten = txtTimKiem.Text;
+            if (ten.Length > 0)
+            {
+                DoiTuongBLL doiTuongBLL = new DoiTuongBLL();
+                List<DoiTuong> dsDT = doiTuongBLL.dsDoiTuong("%"+ten+"%");
+                gvDoiTuong.DataSource = dsDT;
+                DataBind();
+            }
+            else
+            {
+                loadData();
+            }
+        }
     }
 }

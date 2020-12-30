@@ -9,13 +9,26 @@
     <link href="/css/style1.css" type="text/css" rel="stylesheet" />
     <link href="/css/nackbarCustom.css" type="text/css" rel="stylesheet" />
 </head>
+<style>
+    .container {
+    position:static;
+    left: 0;
+    /* margin-top: 30px; */
+    margin: auto;
+    border-radius: 10px;
+    max-width: 550px;
+    padding: 16px;
+    background-color: white;
+}
+</style>
 <body>
 <div class="bg-img">
-  <form runat="server" id="form1" class="container">
+    <div style="height: 150px"></div>
+  <form runat="server" id="form1" class="container" >
     <h1>Login</h1>
 
     <label for="email"><b>Email</b></label>
-      <asp:TextBox placeholder="Enter Password" type="text" ID="txtEmail" name="email" runat="server" />
+      <asp:TextBox placeholder="Enter Email" type="text" ID="txtEmail" name="email" runat="server" />
 
     <label for="psw"><b>Password</b></label>
       <asp:TextBox ID="txtPass" type="password" runat="server" placeholder="Enter Password" name="psw"/>

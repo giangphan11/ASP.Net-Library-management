@@ -51,15 +51,6 @@ namespace LibraryManagement.Admin.Edit
         protected global::System.Web.UI.WebControls.TextBox txtGhiChu;
 
         /// <summary>
-        /// btnSua control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSua;
-
-        /// <summary>
         /// btnHuy control.
         /// </summary>
         /// <remarks>
@@ -67,5 +58,14 @@ namespace LibraryManagement.Admin.Edit
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnHuy;
+
+        /// <summary>
+        /// btnSua control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSua;
     }
 }

@@ -10,6 +10,8 @@ namespace LibraryManagement.Admin
 {
     public partial class AMuonTheoTheLoai : System.Web.UI.Page
     {
+        private bool check1 = false;
+        private bool check2 = false;
         protected void Page_Load(object sender, EventArgs e)
         {
             loadDataAll();
@@ -42,9 +44,26 @@ namespace LibraryManagement.Admin
 
         protected void btnXem_Click(object sender, EventArgs e)
         {
-            DateTime date1 = DateTime.Parse(txtDate1.Text);
-            DateTime date2 = DateTime.Parse(txtDate2.Text);
-            loadData2(date1, date2);
+            if(check1 && check2)
+            {
+                DateTime date1 = DateTime.Parse(txtDate1.Text);
+                DateTime date2 = DateTime.Parse(txtDate2.Text);
+                loadData2(date1, date2);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        protected void txtDate1_TextChanged(object sender, EventArgs e)
+        {
+            check1 = true;
+        }
+
+        protected void txtDate2_TextChanged(object sender, EventArgs e)
+        {
+            check2 = true;
         }
     }
 }

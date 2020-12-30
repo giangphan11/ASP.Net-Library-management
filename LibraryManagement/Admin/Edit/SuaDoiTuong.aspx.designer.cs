@@ -33,13 +33,13 @@ namespace LibraryManagement.Admin.Edit
         protected global::System.Web.UI.WebControls.TextBox txtTenDT;
 
         /// <summary>
-        /// lbThongBao control.
+        /// btnQuayLai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbThongBao;
+        protected global::System.Web.UI.WebControls.Button btnQuayLai;
 
         /// <summary>
         /// btnSua control.
@@ -51,12 +51,12 @@ namespace LibraryManagement.Admin.Edit
         protected global::System.Web.UI.WebControls.Button btnSua;
 
         /// <summary>
-        /// btnQuayLai control.
+        /// lbThongBao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnQuayLai;
+        protected global::System.Web.UI.WebControls.Label lbThongBao;
     }
 }

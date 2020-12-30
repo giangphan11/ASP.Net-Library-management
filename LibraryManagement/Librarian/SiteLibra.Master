@@ -311,7 +311,7 @@
 				</a>
 			</li>
 			<li class="sidebar-nav-item">
-				<a href="/Librarian/TTMuonSach.aspx" class="sidebar-nav-link">
+				<a href="/Librarian/TTMuonSach.aspx" class="sidebar-nav-link muonsach">
 					<div>
 						<i class="fa fa-chevron-circle-left"></i>
 					</div>
@@ -319,7 +319,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Librarian/TTTraSach.aspx" class="sidebar-nav-link">
+				<a href="/Librarian/TTTraSach.aspx" class="sidebar-nav-link trasach">
 					<div>
 						<i class="fa fa-chevron-circle-right"></i>
 					</div>
@@ -327,7 +327,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Librarian/TTMuonTheoTL.aspx" class="sidebar-nav-link">
+				<a href="/Librarian/TTMuonTheoTL.aspx" class="sidebar-nav-link muontheotheloai">
 					<div>
 						<i class="fa fa-server"></i>
 					</div>
@@ -335,7 +335,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Librarian/TTMuonQuaHan.aspx" class="sidebar-nav-link">
+				<a href="/Librarian/TTMuonQuaHan.aspx" class="sidebar-nav-link muonquahan">
 					<div>
 						<i class="fa fa-bullhorn"></i>
 					</div>
@@ -343,7 +343,7 @@
 				</a>
 			</li>
 			<li  class="sidebar-nav-item">
-				<a href="/Librarian/TTTop10TL.aspx" class="sidebar-nav-link">
+				<a href="/Librarian/TTTop10TL.aspx" class="sidebar-nav-link muonnhieunhat">
 					<div>
 						<i class="fa fa-list-ol"></i>
 					</div>

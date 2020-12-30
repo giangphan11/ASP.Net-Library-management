@@ -55,5 +55,21 @@ namespace LibraryManagement.Admin
             lblThongBao.Text = chucVuBLL.themCV(cv);
             loadData();
         }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string ten = txtTimKiem.Text;
+            if (ten.Length > 0)
+            {
+                ChucVuBLL chucVuBLL = new ChucVuBLL();
+                List<ChucVu> dsChucVu = chucVuBLL.getChucVu(ten);
+                gvChucVu_ad.DataSource = dsChucVu;
+                DataBind();
+            }
+            else
+            {
+                loadData();
+            }
+        }
     }
 }

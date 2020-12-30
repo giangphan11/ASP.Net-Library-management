@@ -100,6 +100,7 @@
     <Content Include="Admin\Edit\SuaTaiLieu.aspx" />
     <Content Include="Admin\Edit\SuaTheLoai.aspx" />
     <Content Include="Admin\AQLTacGia.aspx" />
+    <Content Include="css\giangp.css" />
     <Content Include="css\styleMasterLibrarian.css" />
     <Content Include="assets\AT-pro-black.png" />
     <Content Include="assets\AT-pro-logo.png" />

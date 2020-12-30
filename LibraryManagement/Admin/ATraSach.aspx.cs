@@ -13,7 +13,8 @@ namespace LibraryManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //do du lieu
+                   
         }
 
         private void alertz(string z)
@@ -31,6 +32,7 @@ namespace LibraryManagement
             PhieuTraSachBUS obj = new PhieuTraSachBUS();
             if (txtMaDG.Text != "")
             {
+                Session["madg"] = txtMaDG.Text;
                 if (!obj.check_maDG(txtMaDG.Text))
                 {
                     //thong bao
@@ -64,6 +66,17 @@ namespace LibraryManagement
                     {
                         GridView2.Enabled = false;
                         GridView2.ForeColor = Color.Gray;
+
+
+                        //hien thi len form tailieu
+                        txtMaSach.Text ="";
+                        txtTenSach.Text = "";
+                        txtMaPhieu.Text = "";
+                        txtSoLuongTra.Text = "";
+
+                        //button
+                        btnTraSach.Enabled = true;
+
                     }
 
                     //thong bao
@@ -76,15 +89,26 @@ namespace LibraryManagement
             {
                 alertz("Mã độc giả không được để trống!");
             }
-
+           
         }
-
+        private void loadBang1(string ma)
+        {
+            PhieuTraSachBUS obj = new PhieuTraSachBUS();
+            DataTable dt = obj.timkiem(ma);
+            GridView1.DataSource = dt;
+            DataBind();
+        }
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string madg = (String)Session["madg"];
+            if (madg.Length > 0)
+            {
+                loadBang1(madg);
+            }
             PhieuTraSachBUS obj = new PhieuTraSachBUS();
             //lay ma phieu
             string maPhieu = GridView1.SelectedRow.Cells[1].Text;
-
+            //Session["maphieu"] = maPhieu;
             //Mang gia tri
             string[] param = obj.layThongTinPhieu(maPhieu);
             string ngay = param[2].Substring(0, 9);
@@ -97,6 +121,9 @@ namespace LibraryManagement
             lbNgayMuon.Text = oDate;
             lbMaNV.Text = param[3];
             lbTenNV.Text = param[4];
+
+            //lấy key tìm kiếm
+            //đổ dữ liệu
 
             //hien thi chi tiet cac tai lieu muon (PhieuMuonChiIiet5)
             loadList2();

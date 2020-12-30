@@ -1,0 +1,25 @@
+﻿
+body {
+}
+#container {
+    
+    width:100%;
+    height:auto;
+}
+
+#container #than{
+    width:100%;
+    height:630px;
+}
+#container #left{
+    width:50%;
+    height:100%;
+    float:left;
+    
+}
+#container #right{
+    width:50%;
+    height:100%;
+    float:right;
+    
+}

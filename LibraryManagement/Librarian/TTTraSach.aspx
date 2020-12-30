@@ -4,4 +4,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head2" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung2" runat="server">
+
+
+    <script src="/scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.trasach').toggleClass('active')
+        })
+    </script>
 </asp:Content>

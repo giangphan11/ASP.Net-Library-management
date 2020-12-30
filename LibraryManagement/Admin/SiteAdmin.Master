@@ -21,6 +21,27 @@
 	<%--<link rel="stylesheet" href="/css/nackbarCustom.css" type="text/css" />--%>
     
 </head>
+
+<style>
+
+    .card {
+		padding:20px !important;
+    }
+
+	.sidebar, .wrapper  {
+		transition: none !important;
+	}
+	.wrapper {
+		margin-left: 250px !important;
+	}
+
+
+    :root {
+        --danger-color: #4834d4 !important;
+    }
+
+</style>
+
 <body class="overlay-scrollbar">
 	<form id="form1" runat="server">
     <!-- navbar -->

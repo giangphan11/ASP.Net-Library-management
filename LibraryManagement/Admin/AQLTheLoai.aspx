@@ -2,14 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="tieu_de" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <link rel="stylesheet" href="/css/giangp.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
-   <h2>Quản lý thể loại</h2>
-    <asp:TextBox placeholder="Tìm kiếm theo tên" ID="txtTimKiem" runat="server" />
-    <asp:Button ID="btnTimKiem" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
-    
-    <p>&nbsp;</p>
-    <asp:GridView ID="grd" runat="server" AutoGenerateColumns="false" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" OnSelectedIndexChanged="grd_SelectedIndexChanged">
+   
+
+    <div class="col-12 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3>
+							Quản lý thể loại
+						</h3>
+					</div>
+
+		<asp:TextBox CssClass="search half" placeholder="Tìm kiếm theo tên" ID="txtTimKiem" runat="server" />
+    <asp:Button ID="btnTimKiem" CssClass="button" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
+
+    <asp:GridView class="col-12 col-m-12 col-sm-12" ID="grd" runat="server" AutoGenerateColumns="false" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" OnSelectedIndexChanged="grd_SelectedIndexChanged">
         <FooterStyle BackColor="White" ForeColor="#333333" />
         <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
@@ -24,42 +33,57 @@
             <asp:BoundField HeaderText="Tên thể loại" DataField="TenTLoai"/>
             <asp:BoundField HeaderText="Ghi chú" DataField="GhiChu"/>
 
+            <asp:TemplateField HeaderText="Sửa">
+                <ItemTemplate>
+                    <asp:Button CssClass="button b" ID="btnSua" OnCommand="update" CommandName="update" Text="Sửa"
+                        CommandArgument='<%# Bind("MaTLoai") %>' runat="server"/>
+                </ItemTemplate>
+            </asp:TemplateField>
+
+
             <asp:TemplateField HeaderText="Xoá">
                 <ItemTemplate>
-                    <asp:Button ID="btnXoa" CommandName="delete" Text="Xoá"
+                    <asp:Button CssClass="button r" ID="btnXoa" CommandName="delete" Text="Xoá"
                         CommandArgument='<%# Bind("MaTLoai") %>' runat="server"
                         OnCommand="delete"
                         OnClientClick="return confirm('Xác nhận xoá ?')"/>
                 </ItemTemplate>
             </asp:TemplateField>
 
-            <asp:TemplateField HeaderText="Sửa">
-                <ItemTemplate>
-                    <asp:Button ID="btnSua" OnCommand="update" CommandName="update" Text="Sửa"
-                        CommandArgument='<%# Bind("MaTLoai") %>' runat="server"/>
-                </ItemTemplate>
-            </asp:TemplateField>
+            
         </Columns>
     </asp:GridView>
-    <p>&nbsp;</p>
-    <h2>Thêm thể loại</h2>
+
+    <h3>Thêm thể loại</h3>
     <table>
         <tr>
             <td>Mã thể loại: </td>
-            <td><asp:TextBox ID="txtMa" runat="server"/></td>
+            <td><asp:TextBox CssClass="inp" ID="txtMa" runat="server"/></td>
         </tr>
         <tr>
             <td>Tên thể loại: </td>
-            <td><asp:TextBox ID="txtTen" runat="server"/></td>
+            <td><asp:TextBox CssClass="inp" ID="txtTen" runat="server"/></td>
         </tr>
          <tr>
             <td>Ghi chú: </td>
-            <td><asp:TextBox ID="txtGhiChu" runat="server"/></td>
+            <td><asp:TextBox CssClass="inp" ID="txtGhiChu" runat="server"/></td>
         </tr>
-        
+        <tr>
+            <td colspan="2">
+                <asp:Button Width="100%" ID="btnThem" CssClass="button"  runat="server" Text="Thêm" OnClick="btnThem_Click" />
+            </td>
+        </tr>
     </table>
     
-    <asp:Button ID="btnThem" Width="100px" runat="server" Text="Thêm" OnClick="btnThem_Click" />
+    
+					
+					
+					
+					
+				</div>
+			</div>
+    
+    
 
     <asp:Label ID="messenger" runat="server" />
 

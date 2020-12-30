@@ -14,6 +14,10 @@ namespace BLL
         {
             return vuAccess.getListChucVu();
         }
+        public List<ChucVu> getChucVu(string ten)
+        {
+            return vuAccess.getListChucVu(ten);
+        }
         public string xoaCV(string ma)
         {
             return vuAccess.xoaChucVu(ma);
