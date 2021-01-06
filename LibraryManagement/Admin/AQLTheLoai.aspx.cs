@@ -90,11 +90,13 @@ namespace LibraryManagement.Admin
 
         protected void btnTimKiem_Click(object sender, EventArgs e)
         {
+            lblTK.Text = "";
             string ten = txtTimKiem.Text;
             if (ten.Length > 0)
             {
                 TheLoaiBLL theLoaiBLL = new TheLoaiBLL();
                 List<TheLoai> list = theLoaiBLL.getListCategory("%"+ten+"%");
+                lblTK.Text = "Kết quả tìm kiếm: " + list.Count;
                 grd.DataSource = list;
                 DataBind();
             }

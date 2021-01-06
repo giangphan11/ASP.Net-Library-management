@@ -86,10 +86,10 @@ namespace DAL
                 reader.Close();
                 return taiLieu;
             }
-            catch(Exception exx)
-            {
+            catch { }
+            
                 return null;
-            }
+            
         }
 
         public string suaTaiLieu(TaiLieu taiLieu)

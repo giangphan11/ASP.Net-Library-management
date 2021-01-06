@@ -22,14 +22,18 @@
         </tr>
         <tr>
             <td>Tên chức vụ: </td>
-            <td><asp:TextBox CssClass="inp" ID="txtTen" runat="server"/></td>
+            <td><asp:TextBox CssClass="inp" ID="txtTen" runat="server"/>
+                <asp:RequiredFieldValidator ID="rxtTen" runat="server" ControlToValidate="txtTen"
+                        ErrorMessage="Tên không được được để trống!" ForeColor="red"/>
+            </td>
+
         </tr>
         <tr>
             <td>
-                 <asp:Button CssClass="button g" runat="server" Text="Quay lại" ID="btnHuy" OnClick="btnHuy_Click" />
+                 <asp:Button CausesValidation="false" CssClass="button g" runat="server" Text="Quay lại" ID="btnHuy" OnClick="btnHuy_Click" />
             </td>
             <td>
-                <asp:Button Width="100%" runat="server" CssClass="button" ID="btnSua" Text="Sửa" OnClick="btnSua_Click" />
+                <asp:Button CausesValidation="true" Width="100%" runat="server" CssClass="button" ID="btnSua" Text="Sửa" OnClick="btnSua_Click" />
             </td>
             
         </tr>

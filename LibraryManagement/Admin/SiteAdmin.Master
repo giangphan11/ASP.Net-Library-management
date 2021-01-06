@@ -23,7 +23,9 @@
 </head>
 
 <style>
-
+	*{
+		object-fit:cover!important;
+	}
     .card {
 		padding:20px !important;
     }
@@ -39,6 +41,86 @@
     :root {
         --danger-color: #4834d4 !important;
     }
+
+
+	.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+/* Blue */
+.b {
+    background-color: #008CBA;
+}
+/* Red */
+.r {
+    background-color: #f44336;
+}
+
+.z {
+    background-color: #6c5ce7;
+}
+/* Gray */
+.g {
+    background-color: #e7e7e7;
+    color: black;
+}
+/* black */
+
+/* ================ DROPDOWN LIST ===================*/
+.drop{
+	width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+
+
+/* ================ TEXTBOX CUSTOM =======================*/
+.search{
+	width:60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+.search .full{
+    width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+.search .half {
+    width:60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.inp {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #3CBC8D;
+    color: white;
+}
+
 
 </style>
 

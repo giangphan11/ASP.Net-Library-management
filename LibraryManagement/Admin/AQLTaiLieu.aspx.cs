@@ -91,7 +91,11 @@ namespace LibraryManagement.Admin
                 taiLieu.NXB = txtNXB.Text;
                 taiLieu.NamXB = Int32.Parse(txtNamXB.Text);
                 taiLieu.MaTG = drTacGia.SelectedValue;
-                taiLieu.Anh= fileAnh.FileName;
+                if (fileAnh.HasFile)
+                {
+                    taiLieu.Anh = fileAnh.FileName;
+                }
+
                 taiLieuBLL.addDocument(taiLieu);
                 LoadData();
                 messenger.Text = "Thêm thành công tài liệu.";
@@ -109,10 +113,12 @@ namespace LibraryManagement.Admin
 
         protected void btnTimKiem_Click(object sender, EventArgs e)
         {
+            lblTK.Text = "";
             string ten = txtTimKiem.Text;
             if (ten.Length > 0)
             {
                 List<TaiLieu> dsTl = new TaiLieuBLL().getListDocument("%"+ten+"%");
+                lblTK.Text = "Kết quả tìm kiếm: " + dsTl.Count;
                 foreach (TaiLieu tl in dsTl)
                 {
                     tl.Anh = ResolveUrl(srcImage + tl.Anh);

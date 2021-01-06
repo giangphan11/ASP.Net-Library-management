@@ -62,11 +62,13 @@ namespace LibraryManagement.Admin
 
         protected void btnTimKiem_Click(object sender, EventArgs e)
         {
+            lblTK.Text = "";
             string ten = txtTimKiem.Text;
             if (ten.Length > 0)
             {
                 DoiTuongBLL doiTuongBLL = new DoiTuongBLL();
                 List<DoiTuong> dsDT = doiTuongBLL.dsDoiTuong("%"+ten+"%");
+                lblTK.Text = "Kết quả tìm kiếm: " + dsDT.Count;
                 gvDoiTuong.DataSource = dsDT;
                 DataBind();
             }

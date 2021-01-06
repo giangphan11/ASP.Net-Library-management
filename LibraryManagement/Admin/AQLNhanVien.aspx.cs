@@ -93,11 +93,13 @@ namespace LibraryManagement.Admin
 
         protected void btnTimKiem_Click(object sender, EventArgs e)
         {
+            lbTK.Text = "";
             string ten = txtTimKiem.Text;
             if (ten.Length > 0)
             {
                 NhanVienBLL nhanVienBLL = new NhanVienBLL();
                 List<NhanVien> dsNv = nhanVienBLL.getAllNhanVien("%"+ten+"%");
+                lbTK.Text = "Kết quả tìm kiếm: " + dsNv.Count;
                 foreach (NhanVien nv in dsNv)
                 {
                     nv.Anh = ResolveUrl(srcImage + nv.Anh);

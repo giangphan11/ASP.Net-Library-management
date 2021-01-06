@@ -2,7 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="tieu_de" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-    <link href="/css/giangp.css" type="text/css" rel="stylesheet" />
+    
+    
+    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="noi_dung" runat="server">
 
@@ -15,8 +17,9 @@
 					</div>
 					
 					<asp:TextBox CssClass="search half" placeholder="Tìm kiếm theo tên" ID="txtTimKiem" runat="server" />
-    <asp:Button ID="btnTimKiem" CssClass="button" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
-					<asp:GridView ID="gvNhanVien_ad" class="col-12 col-m-12 col-sm-12" AutoGenerateColumns="false" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+    <asp:Button CausesValidation="false" ID="btnTimKiem" CssClass="button" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
+					<asp:Label ID="lbTK" runat="server" />
+                    <asp:GridView ID="gvNhanVien_ad" class="col-12 col-m-12 col-sm-12" AutoGenerateColumns="false" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
         <FooterStyle BackColor="White" ForeColor="#000066" />
         <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
         <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -37,14 +40,14 @@
             
             <asp:TemplateField HeaderText="Sửa nhân viên">
                 <ItemTemplate>
-                    <asp:Button ID="btnSua" Text="Sửa" CssClass="button b" CommandName="suanv" CommandArgument='<%#Bind("MaNV") %>'
+                    <asp:Button CausesValidation="false" ID="btnSua" Text="Sửa" CssClass="button b" CommandName="suanv" CommandArgument='<%#Bind("MaNV") %>'
                         runat="server"  OnCommand="xu_ly_sua"/>
                 </ItemTemplate>
             </asp:TemplateField>
 
             <asp:TemplateField HeaderText="Xoá nhân viên">
                 <ItemTemplate>
-                    <asp:Button ID="btnXoaNV" CssClass="button r" Text="Xoá" CommandName="xoanv" CommandArgument='<%#Bind("MaNV") %>'
+                    <asp:Button CausesValidation="false" ID="btnXoaNV" CssClass="button r" Text="Xoá" CommandName="xoanv" CommandArgument='<%#Bind("MaNV") %>'
                         runat="server" OnClientClick="return confirm('Xác nhận xoá')" OnCommand="xu_ly_XoaNV"/>
                 </ItemTemplate>
             </asp:TemplateField>
@@ -53,15 +56,46 @@
     </asp:GridView>
     <h3>Thêm nhân viên</h3>
 
-<asp:Table runat="server">
+<asp:Table runat="server" class="col-10 col-m-10 col-sm-10">
         <asp:TableRow>
             <asp:TableHeaderCell>Mã nhân viên:</asp:TableHeaderCell>
-            <asp:TableCell><asp:TextBox ID="txtMaNV" CssClass="inp" runat="server" /></asp:TableCell></asp:TableRow><asp:TableRow>
-            <asp:TableHeaderCell>Tên nhân viên:</asp:TableHeaderCell><asp:TableCell><asp:TextBox CssClass="inp" ID="txtTen" runat="server" /></asp:TableCell></asp:TableRow><asp:TableRow>
+            <asp:TableCell>
+                <asp:TextBox ID="txtMaNV" CssClass="inp" runat="server" />
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:RequiredFieldValidator ID="rxtMa" runat="server" ControlToValidate="txtMaNV"
+                        ErrorMessage="Mã không được để trống!" ForeColor="red"/>
+            </asp:TableCell>
+
+        </asp:TableRow>
+    <asp:TableRow>
+            <asp:TableHeaderCell>Tên nhân viên:</asp:TableHeaderCell>
+        <asp:TableCell><asp:TextBox CssClass="inp" ID="txtTen" runat="server" />
+        </asp:TableCell>
+        <asp:TableCell>
+            <asp:RequiredFieldValidator ID="rq2" runat="server" ControlToValidate="txtTen"
+                        ErrorMessage="Tên không được để trống!" ForeColor="red"/>
+        </asp:TableCell>
+    </asp:TableRow><asp:TableRow>
             <asp:TableHeaderCell>Chức vụ:</asp:TableHeaderCell><asp:TableCell>
-                <asp:DropDownList ID="dropDownListCV" CssClass="inp" runat="server"></asp:DropDownList></asp:TableCell></asp:TableRow><asp:TableRow>
-            <asp:TableHeaderCell>Tên đăng nhập:</asp:TableHeaderCell><asp:TableCell><asp:TextBox CssClass="inp" ID="txtUsername" runat="server" /></asp:TableCell></asp:TableRow><asp:TableRow>
-            <asp:TableHeaderCell>Mật khẩu:</asp:TableHeaderCell><asp:TableCell><asp:TextBox ID="txtPass" CssClass="inp" runat="server" /></asp:TableCell></asp:TableRow><asp:TableRow>
+                <asp:DropDownList ID="dropDownListCV" CssClass="drop" runat="server"></asp:DropDownList></asp:TableCell></asp:TableRow><asp:TableRow>
+            <asp:TableHeaderCell>Tên đăng nhập:</asp:TableHeaderCell>
+                    <asp:TableCell><asp:TextBox CssClass="inp" ID="txtUsername" runat="server" />
+
+                    </asp:TableCell>
+                    <asp:TableCell>
+                        <asp:RequiredFieldValidator ID="rq3" runat="server" ControlToValidate="txtUsername"
+                        ErrorMessage="Tên đăng nhập không được để trống!" ForeColor="red"/>
+                    </asp:TableCell>
+                                                                                                                                       </asp:TableRow>
+    <asp:TableRow>
+            <asp:TableHeaderCell>Mật khẩu:</asp:TableHeaderCell>
+        <asp:TableCell><asp:TextBox ID="txtPass" CssClass="inp" runat="server" /></asp:TableCell>
+        <asp:TableCell>
+            <asp:RequiredFieldValidator ID="rq4" runat="server" ControlToValidate="txtPass"
+                        ErrorMessage="Mật khẩu không được để trống!" ForeColor="red"/>
+        </asp:TableCell>
+    </asp:TableRow><asp:TableRow>
             <asp:TableHeaderCell>Ảnh:</asp:TableHeaderCell>
                 <asp:TableCell>
             <asp:FileUpload ID="fileUploadAnh" CssClass="inp" runat="server" />
@@ -69,7 +103,7 @@
         </asp:TableRow>
     <asp:TableFooterRow>
         <asp:TableCell ColumnSpan="2">
-            <asp:Button Width="100%" ID="btnThem" CssClass="button" Text="Thêm" OnClick="xuLyThem" runat="server"/>
+            <asp:Button CausesValidation="true" Width="100%" ID="btnThem" CssClass="button" Text="Thêm" OnClick="xuLyThem" runat="server"/>
         </asp:TableCell>
     </asp:TableFooterRow>
     </asp:Table>

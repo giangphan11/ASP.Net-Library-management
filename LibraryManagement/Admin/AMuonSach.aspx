@@ -33,7 +33,7 @@
                         <td>
                             <asp:TextBox CssClass="inp" ID="txtMaPhieu" runat="server" /></td>
                         <td>
-                            <asp:ImageButton ImageUrl="/images/se2.png" runat="server" ID="btnTimKiemMaPhieu" OnClick="btnTimKiemMaPhieu_Click" /></td>
+                            <asp:ImageButton ImageUrl="/images/se11.png" runat="server" ID="btnTimKiemMaPhieu" OnClick="btnTimKiemMaPhieu_Click" /></td>
                     </tr>
                     <tr>
                         <td>

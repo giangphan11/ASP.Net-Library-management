@@ -17,8 +17,9 @@
 					
 					
 					<asp:TextBox placeholder="Tìm kiếm theo tên" CssClass="search half" ID="txtTimKiem" runat="server" />
-    <asp:Button ID="btnTimKiem" Text="Tìm kiếm" CssClass="button" runat="server" OnClick="btnTimKiem_Click" />
-    <asp:GridView class="col-12 col-m-12 col-sm-12"  ID="gvDoiTuong" runat="server" AutoGenerateColumns="false"
+    <asp:Button CausesValidation="false" ID="btnTimKiem" Text="Tìm kiếm" CssClass="button" runat="server" OnClick="btnTimKiem_Click" />
+    <asp:Label ID="lblTK" runat="server" />
+                    <asp:GridView class="col-12 col-m-12 col-sm-12"  ID="gvDoiTuong" runat="server" AutoGenerateColumns="false"
         BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
         <FooterStyle BackColor="White" ForeColor="#333333" />
         <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
@@ -35,7 +36,7 @@
             
             <asp:TemplateField HeaderText="Sửa đối tượng">
                 <ItemTemplate>
-                    <asp:Button ID="btnSua" CssClass="button b"
+                    <asp:Button CausesValidation="false" ID="btnSua" CssClass="button b"
                         Text="Sửa" 
                         CommandName="suaDt" 
                         CommandArgument='<%#Bind("MaDT") %>' 
@@ -46,7 +47,7 @@
             
             <asp:TemplateField HeaderText="Xoá đối tượng">
                 <ItemTemplate>
-                    <asp:Button ID="btnXoa" CssClass="button r"
+                    <asp:Button CausesValidation="false" ID="btnXoa" CssClass="button r"
                         Text="Xoá" 
                         CommandName="xoaDt" 
                         CommandArgument='<%#Bind("MaDT") %>' 
@@ -62,18 +63,28 @@
     <asp:Label ID="lblThongBao" runat="server" />
     <br />
     <h3>Thêm đối tượng</h3>
-    <asp:Table runat="server">
-        <asp:TableRow>
+    <asp:Table class="col-9 col-m-9 col-sm-9" runat="server">
+        <asp:TableRow >
             <asp:TableCell>Mã đối tượng: </asp:TableCell>
             <asp:TableCell>
                 <asp:TextBox CssClass="inp" ID="txtMaDT" runat="server" />
-            </asp:TableCell></asp:TableRow><asp:TableRow>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:RequiredFieldValidator ID="rq1" runat="server" ControlToValidate="txtMaDT" Display="Dynamic"
+                        ErrorMessage="Mã không được để trống!" ForeColor="red"/>
+            </asp:TableCell>
+        </asp:TableRow><asp:TableRow>
             <asp:TableCell>Tên đối tượng: </asp:TableCell><asp:TableCell>
                 <asp:TextBox ID="txtTenDT" CssClass="inp" runat="server" />
-            </asp:TableCell></asp:TableRow>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:RequiredFieldValidator ID="rq2" runat="server" ControlToValidate="txtTenDT" Display="Dynamic"
+                        ErrorMessage="Tên không được để trống!" ForeColor="red"/>
+            </asp:TableCell>
+                       </asp:TableRow>
         <asp:TableFooterRow>
             <asp:TableCell ColumnSpan="2">
-                <asp:Button ID="btnThem" Width="100%" Text="Thêm" runat="server" CssClass="button" OnClick="btnThem_Click" />
+                <asp:Button CausesValidation="true" ID="btnThem" Width="100%" Text="Thêm" runat="server" CssClass="button" OnClick="btnThem_Click" />
             </asp:TableCell>
 
         </asp:TableFooterRow>

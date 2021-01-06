@@ -15,7 +15,7 @@
 					</div>
 					
 					<asp:Label ID="lb1" runat="server" />
-    <table class="col-6 col-m-6 col-sm-6">
+    <table class="col-9 col-m-9 col-sm-9">
         <tr>
             <td>Mã thể loại: </td>
             <td><asp:TextBox CssClass="inp" Enabled="false" ID="txtMa" runat="server"/></td>
@@ -23,6 +23,10 @@
         <tr>
             <td>Tên thể loại: </td>
             <td><asp:TextBox ID="txtTen" CssClass="inp" runat="server"/></td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtTen" Display="Dynamic"
+                            ErrorMessage="Tên không được để trống!" ForeColor="red" />
+            </td>
         </tr>
          <tr>
             <td>Ghi chú: </td>
@@ -30,10 +34,10 @@
         </tr>
         <tr>
             <td>
-                <asp:Button Text="Quay lại" CssClass="button g" runat="server" ID="btnHuy" OnClick="btnHuy_Click" />
+                <asp:Button CausesValidation="false" Text="Quay lại" CssClass="button g" runat="server" ID="btnHuy" OnClick="btnHuy_Click" />
             </td>
             <td>
-                <asp:Button CssClass="button" Width="100%" Text="Sửa" runat="server" ID="btnSua" OnClick="btnSua_Click" />
+                <asp:Button CausesValidation="true" CssClass="button" Width="100%" Text="Sửa" runat="server" ID="btnSua" OnClick="btnSua_Click" />
             </td>
         </tr>
     </table>

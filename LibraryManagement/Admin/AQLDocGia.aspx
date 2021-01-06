@@ -18,8 +18,8 @@
 					
 					
 					<asp:TextBox CssClass="search half" placeholder="Tìm kiếm theo tên" ID="txtTimKiem" runat="server" />
-    <asp:Button ID="btnTimKiem" Text="Tìm kiếm" CssClass="button" runat="server" OnClick="btnTimKiem_Click" />
-
+    <asp:Button CausesValidation="false" ID="btnTimKiem" Text="Tìm kiếm" CssClass="button" runat="server" OnClick="btnTimKiem_Click" />
+        <asp:Label ID="lblTK" runat="server" />
     <asp:GridView ID="gvDocGia_a" AutoGenerateColumns="false" runat="server" class="col-12 col-m-12 col-sm-12"
         BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
         <FooterStyle BackColor="#CCCCCC" />
@@ -43,7 +43,7 @@
             
             <asp:TemplateField HeaderText="Sửa độc giả">
                 <ItemTemplate>
-                    <asp:Button ID="btnSuaDocGia" runat="server" Text="Sửa" OnCommand="xuLySua" 
+                    <asp:Button CausesValidation="false" ID="btnSuaDocGia" runat="server" Text="Sửa" OnCommand="xuLySua" 
                         CommandName="sua" CssClass="button b"
                         CommandArgument='<%#Bind("MaDG") %>'/>
                 </ItemTemplate>
@@ -51,7 +51,7 @@
             
             <asp:TemplateField HeaderText="Xoá độc giả">
                 <ItemTemplate>
-                    <asp:Button CssClass="button r" ID="btnXoaDocGia" runat="server" Text="Xoá" OnCommand="xuLyXoa" 
+                    <asp:Button CausesValidation="false" CssClass="button r" ID="btnXoaDocGia" runat="server" Text="Xoá" OnCommand="xuLyXoa" 
                         OnClientClick="return confirm('Xác nhận xoá?')"
                         CommandName="xoa"
                         CommandArgument='<%#Bind("MaDG") %>'/>
@@ -64,14 +64,22 @@
     <br />
     <asp:Label ID="lblNo" runat="server" />
     <h3>Thêm độc giả</h3>
-    <table>
+    <table class="col-9 col-m-9 col-sm-9">
         <tr>
             <td>Mã độc giả:</td>
             <td><asp:TextBox CssClass="inp" ID="txtMaDG" runat="server" /></td>
+            <td>
+                <asp:RequiredFieldValidator ID="rq1" runat="server" ControlToValidate="txtMaDG" Display="Dynamic"
+                        ErrorMessage="Mã được để trống!" ForeColor="red"/>
+            </td>
         </tr>
         <tr>
             <td>Tên độc giả:</td>
             <td><asp:TextBox CssClass="inp" ID="txtTen" runat="server" /></td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTen" Display="Dynamic"
+                        ErrorMessage="Tên được để trống!" ForeColor="red"/>
+            </td>
         </tr>
         <tr>
             <td>Giới tính:</td>
@@ -101,7 +109,7 @@
         </tr>
         <tr>
             <td>Đối tượng:  </td>
-            <td><asp:DropDownList CssClass="inp" ID="dropDownDoiTuong" runat="server" /></td>
+            <td><asp:DropDownList CssClass="drop" ID="dropDownDoiTuong" runat="server" /></td>
         </tr>
         <tr>
             <td>Ngày cấp:</td>
@@ -128,6 +136,10 @@
                     ImageUrl="/assets/calendar1.png" Width="32px"
                     onclick="ibtCal3_Click" />
             </td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtTen" Display="Dynamic"
+                        ErrorMessage="Ngày hết hạn không được để trống!" ForeColor="red"/>
+            </td>
         </tr>
         <tr>
             <td>Ảnh: </td>
@@ -135,7 +147,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <asp:Button Width="100%" Text="Thêm" ID="btnThem" runat="server" CssClass="button" OnClick="btnThem_Click" />
+                <asp:Button CausesValidation="true" Width="100%" Text="Thêm" ID="btnThem" runat="server" CssClass="button" OnClick="btnThem_Click" />
             </td>
         </tr>
     </table>

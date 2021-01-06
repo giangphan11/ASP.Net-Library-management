@@ -13,7 +13,18 @@ namespace LibraryManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //do du lieu
+            if (!IsPostBack)
+            {
+                string madg = (String)Session["madg"];
+                if (madg != null)
+                {
+                    loadBang1(madg);
+                }
+                else
+                {
+                    return;
+                }
+            }
                    
         }
 
@@ -172,7 +183,9 @@ namespace LibraryManagement
             obj.traSach(lbMaPhieu.Text, txtMaSach.Text, Convert.ToInt32(txtSoLuongTra.Text), date);
             loadList2();
             alertz("Trả thành công!");
-            btnTraSach.Enabled = false;
+            txtMaPhieu.Text = "";
+            txtSoLuongTra.Text = "";
+            txtTenSach.Text = "";
         }
     }
 }

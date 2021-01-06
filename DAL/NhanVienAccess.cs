@@ -88,10 +88,10 @@ namespace DAL
                 reader.Close();
                 return nhanVien;
             }
-            catch(Exception ex)
-            {
+            catch { }
+            
                 return null;
-            }
+            
         }
 
         public string suaNhanVien(NhanVien nv)

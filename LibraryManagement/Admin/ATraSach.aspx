@@ -5,8 +5,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <link href="/css/style_tra_sach1.css" type="text/css" rel="stylesheet" />
-    <link href="/css/giangp11.css" type="text/css" rel="stylesheet" />
+    
     <style>
+        #container #fter h3{
+            margin:auto 0;
+
+        }
         .full {
     width: 60% !important;
     }
@@ -34,9 +38,6 @@
                 <asp:Button CssClass="button" ID="btnTimKiem" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
                 <br />
                     <asp:Label ID="lbThongBao" runat="server" />
-					
-					
-					
 					
 				</div>
 			</div>
@@ -225,7 +226,7 @@
 
         </div>
         <div id="fter">
-            <h3>Hệ thống quản lý thư viện - Nhóm 10</h3>
+            <h3 style="text-align:center;">Nhóm 10 | Hệ thống quản lý thư viện - Đại học Công nghiệp Hà Nội</h3>
         </div>
     </div>
 

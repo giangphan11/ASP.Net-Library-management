@@ -99,11 +99,13 @@ namespace LibraryManagement.Admin
 
         protected void btnTimKiem_Click(object sender, EventArgs e)
         {
+            lblTK.Text = "";
             string ten = txtTimKiem.Text;
             if (ten.Length > 0)
             {
                 DocGiaBLL docGiaBLL = new DocGiaBLL();
                 List<DocGia> dsDocGia = docGiaBLL.dsDocGia("%"+ten.Trim()+"%");
+                lblTK.Text = "Kết quả tìm kiếm: " + dsDocGia.Count;
                 gvDocGia_a.DataSource = dsDocGia;
                 foreach (DocGia docGia in dsDocGia)
                 {

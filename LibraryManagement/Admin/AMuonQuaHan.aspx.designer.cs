@@ -51,21 +51,21 @@ namespace LibraryManagement.Admin
         protected global::System.Web.UI.WebControls.Label lblThongBao;
 
         /// <summary>
-        /// btnXuatFile control.
+        /// btnXuatFilePdf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnXuatFile;
+        protected global::System.Web.UI.WebControls.Button btnXuatFilePdf;
 
         /// <summary>
-        /// btnXuatPdf control.
+        /// btnXuatExcel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnXuatPdf;
+        protected global::System.Web.UI.WebControls.Button btnXuatExcel;
     }
 }

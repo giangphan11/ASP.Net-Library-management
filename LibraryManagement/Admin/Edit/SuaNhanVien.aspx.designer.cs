@@ -42,6 +42,15 @@ namespace LibraryManagement.Admin.Edit
         protected global::System.Web.UI.WebControls.TextBox txtTen;
 
         /// <summary>
+        /// rq1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rq1;
+
+        /// <summary>
         /// dropDownListCV control.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,15 @@ namespace LibraryManagement.Admin.Edit
         protected global::System.Web.UI.WebControls.TextBox txtUsername;
 
         /// <summary>
+        /// rq3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rq3;
+
+        /// <summary>
         /// txtPass control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace LibraryManagement.Admin.Edit
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPass;
+
+        /// <summary>
+        /// rq4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rq4;
 
         /// <summary>
         /// fileUploadAnh control.

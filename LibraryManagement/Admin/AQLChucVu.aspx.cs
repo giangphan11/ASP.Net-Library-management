@@ -58,11 +58,13 @@ namespace LibraryManagement.Admin
 
         protected void btnTimKiem_Click(object sender, EventArgs e)
         {
+            lblTK.Text = "";
             string ten = txtTimKiem.Text;
             if (ten.Length > 0)
             {
                 ChucVuBLL chucVuBLL = new ChucVuBLL();
-                List<ChucVu> dsChucVu = chucVuBLL.getChucVu(ten);
+                List<ChucVu> dsChucVu = chucVuBLL.getChucVu("%"+ten+"%");
+                lblTK.Text = "Kết quả tìm kiếm: " + dsChucVu.Count;
                 gvChucVu_ad.DataSource = dsChucVu;
                 DataBind();
             }

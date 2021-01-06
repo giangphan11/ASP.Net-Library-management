@@ -14,7 +14,7 @@ namespace DTO
 
         public TheLoai()
         {
-
+            this.GhiChu = "Không có";
         }
         public TheLoai(string matl,string tentl, string ghichu)
         {

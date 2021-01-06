@@ -45,7 +45,6 @@ namespace LibraryManagement
 
         private void alertz(string z)
         {
-
             ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + z + "')", true);
 
         }
